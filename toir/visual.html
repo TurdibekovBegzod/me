@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vizual tekshiruv — TOIR</title>
+<meta name="description" content="Rasm va videodan uskuna nuqsonlarini aniqlash: zang, oqish, shikastlanish — vaqt belgisi bilan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Asosiy qismga o'tish</a>
+
+<div class="shell">
+
+  <aside class="side">
+    <a class="side-brand" href="../index.html">
+      BEGZOD <br>TURDIBEKOV<span class="dot">.</span>
+      <small>AI Engineer</small>
+    </a>
+
+    <nav class="side-nav" aria-label="Asosiy">
+      <a href="../index.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+          <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+          <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+          <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+        </svg>
+        Loyihalar
+      </a>
+      <a href="../about.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="8" r="3.6"/>
+          <path d="M4.5 20a7.5 7.5 0 0115 0"/>
+        </svg>
+        Men haqimda
+      </a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <main id="main">
+
+      <!-- ============ HERO ============ -->
+      <section class="wrap hero">
+        <a class="proj-back" href="index.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 5l-7 7 7 7"/>
+          </svg>
+          TOIR &mdash; Texnik xizmat AI tizimi
+          <span class="step-n">Bo'lim 04</span>
+        </a>
+        <h1>Vizual tekshiruv</h1>
+        <p class="hero-lead">
+          Uskunaning rasmi yoki videosi yuklanadi &mdash; tizim undagi
+          nuqsonlarni topadi: zang, oqish, yoriq, shikastlanish. Har nuqson
+          uchun qayerdaligi, qanchalik jiddiyligi va videoda qaysi soniyada
+          ko'ringani ko'rsatiladi.
+        </p>
+      </section>
+
+      <!-- ============ MAQSAD ============ -->
+      <section class="band band-alt">
+        <div class="wrap">
+          <h2 class="sec-h">Maqsad</h2>
+          <p class="sec-lead">Nima muammoni hal qiladi.</p>
+
+          <div class="purpose">
+            <p>
+              Ko'rik paytida xodim uskunani aylanib chiqadi va ko'rganini
+              yozib qo'yadi. Tajribasiz xodim boshlanayotgan korroziyani
+              e'tiborsiz qoldiradi, tajribalisi esa har safar bir xil
+              tafsilotni qayta yozadi.
+            </p>
+            <p>
+              <b>Bu yerda telefonda suratga olish yetarli.</b> Tizim
+              nuqsonni topadi, toifalaydi va jiddiyligini baholaydi.
+              Eng muhimi &mdash; shubhali holatda u &laquo;nuqson&raquo; deb
+              qat'iy aytmaydi: soya yoki kirlikni zang deb ko'rsatish
+              ishonchni yo'qotadi, shuning uchun muqobil izoh ham
+              yoziladi.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ OQIM ============ -->
+      <section class="band">
+        <div class="wrap">
+          <h2 class="sec-h">Ishlash WorkFlow</h2>
+
+          <div class="canvas">
+            <svg viewBox="0 -18 1190 400" role="img"
+                 aria-label="Vizual tekshiruv oqimi: rasm yoki videodan nuqson hisobotigacha">
+
+              <!-- ===== ulagichlar ===== -->
+              <path class="wf-link" d="M 148 120 C 174 120 176 120 200 120"/>
+              <path class="wf-link" d="M 300 120 C 326 120 328 120 352 120"/>
+              <path class="wf-link" d="M 452 112 C 480 112 480 70 508 70"/>
+              <!-- ovoz tarmog'i -->
+              <path class="wf-link" d="M 452 130 C 480 130 480 250 508 250"/>
+              <!-- ikkalasi yig'ishga -->
+              <path class="wf-link" d="M 608 70 C 640 70 640 120 672 120"/>
+              <path class="wf-link" d="M 608 250 C 640 250 640 140 672 128"/>
+              <!-- chiqish -->
+              <path class="wf-link" d="M 772 120 C 798 120 800 120 824 120"/>
+
+              <!-- IN: media -->
+              <g class="wf-hit" data-node="media" tabindex="0" role="button" aria-label="Media yuklash tuguni haqida">
+                <rect class="wf-box wf-box-in" x="48" y="92" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(89 111)">
+                  <rect class="wf-ic wf-ic-in" x="1" y="2" width="13" height="14" rx="2"/>
+                  <path class="wf-ic wf-ic-in" d="M14 7l5-3v10l-5-3z"/>
+                </g>
+                <text class="wf-title" x="98" y="166" text-anchor="middle" font-size="12">Rasm / video</text>
+                <text class="wf-sub" x="98" y="180" text-anchor="middle" font-size="9.5">telefondan</text>
+              </g>
+
+              <!-- Kadrlarga bo'lish -->
+              <g class="wf-hit" data-node="kadr" tabindex="0" role="button" aria-label="Kadrlarga bo'lish tuguni haqida">
+                <rect class="wf-box" x="200" y="92" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(240 111)">
+                  <rect class="wf-ic wf-ic-plain" x="1" y="3" width="8" height="12" rx="1.5"/>
+                  <rect class="wf-ic wf-ic-plain" x="11" y="3" width="8" height="12" rx="1.5"/>
+                </g>
+                <text class="wf-title" x="250" y="166" text-anchor="middle" font-size="12">Kadrlarga bo'linadi</text>
+                <text class="wf-sub" x="250" y="180" text-anchor="middle" font-size="9.5">6 tadan guruh</text>
+              </g>
+
+              <!-- Ajratish -->
+              <g class="wf-hit" data-node="ajratish" tabindex="0" role="button" aria-label="Ikki oqim tuguni haqida">
+                <rect class="wf-box" x="352" y="92" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(392 111)">
+                  <path class="wf-ic wf-ic-plain" d="M2 10h4l4-6h8M6 10l4 6h8"/>
+                  <circle class="wf-ic wf-ic-plain" cx="17" cy="4" r="1.6"/>
+                  <circle class="wf-ic wf-ic-plain" cx="17" cy="16" r="1.6"/>
+                </g>
+                <text class="wf-title" x="402" y="166" text-anchor="middle" font-size="12">Ikki oqim</text>
+                <text class="wf-sub" x="402" y="180" text-anchor="middle" font-size="9.5">tasvir va ovoz</text>
+                <circle class="wf-dot" cx="456" cy="112" r="2.8"/>
+                <circle class="wf-dot" cx="456" cy="130" r="2.8"/>
+              </g>
+
+              <!-- Nuqson qidirish -->
+              <g class="wf-hit" data-node="nuqson" tabindex="0" role="button" aria-label="Nuqson qidirish tuguni haqida">
+                <rect class="wf-stack" x="518" y="32" width="100" height="56" rx="12"/>
+                <rect class="wf-stack" x="513" y="37" width="100" height="56" rx="12"/>
+                <rect class="wf-box wf-box-ai" x="508" y="42" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(548 60)">
+                  <circle class="wf-ic" cx="8" cy="8" r="6"/>
+                  <path class="wf-ic" d="M12.5 12.5L18 18"/>
+                </g>
+                <text class="wf-title" x="558" y="116" text-anchor="middle" font-size="12">Nuqson qidiriladi</text>
+                <text class="wf-sub" x="558" y="130" text-anchor="middle" font-size="9.5">zang &#183; oqish &#183; yoriq</text>
+                <text class="wf-loop-t wf-batch" x="558" y="144" text-anchor="middle" font-size="9">6 kadrdan &times; N marta</text>
+                <g transform="translate(604 46)">
+                  <circle class="wf-bot-bg" cx="0" cy="0" r="11"/>
+                  <rect class="wf-bot" x="-5.5" y="-4" width="11" height="8" rx="2.5"/>
+                  <path class="wf-bot" d="M0 -4v-2.6"/>
+                  <circle class="wf-bot" cx="0" cy="-7.6" r="1"/>
+                  <path class="wf-bot" d="M-2.4 -1h.01M2.4 -1h.01"/>
+                  <path class="wf-bot" d="M-1.8 1.8h3.6"/>
+                </g>
+              </g>
+
+              <!-- Ovoz tekshiruvi -->
+              <g class="wf-hit" data-node="ovoz" tabindex="0" role="button" aria-label="Ovoz tekshiruvi tuguni haqida">
+                <rect class="wf-box wf-box-ai" x="508" y="222" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(548 240)">
+                  <path class="wf-ic" d="M2 12V8M6 15V5M10 17V3M14 14V6M18 11V9"/>
+                </g>
+                <text class="wf-title" x="558" y="296" text-anchor="middle" font-size="12">Ovoz solishtiriladi</text>
+                <text class="wf-sub" x="558" y="310" text-anchor="middle" font-size="9.5">bir xil uskunami?</text>
+                <g transform="translate(604 226)">
+                  <circle class="wf-bot-bg" cx="0" cy="0" r="11"/>
+                  <rect class="wf-bot" x="-5.5" y="-4" width="11" height="8" rx="2.5"/>
+                  <path class="wf-bot" d="M0 -4v-2.6"/>
+                  <circle class="wf-bot" cx="0" cy="-7.6" r="1"/>
+                  <path class="wf-bot" d="M-2.4 -1h.01M2.4 -1h.01"/>
+                  <path class="wf-bot" d="M-1.8 1.8h3.6"/>
+                </g>
+              </g>
+
+              <!-- Yig'ish -->
+              <g class="wf-hit" data-node="yigish" tabindex="0" role="button" aria-label="Hisobot yig'ish tuguni haqida">
+                <rect class="wf-box wf-box-ai" x="672" y="92" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(712 110)">
+                  <path class="wf-ic" d="M4 2h8l4 4v12H4z"/>
+                  <path class="wf-ic" d="M12 2v4h4M7 11h6M7 14h4"/>
+                </g>
+                <text class="wf-title" x="722" y="166" text-anchor="middle" font-size="12">Hisobot yig'iladi</text>
+                <text class="wf-sub" x="722" y="180" text-anchor="middle" font-size="9.5">jiddiylik &#183; vaqt</text>
+                <g transform="translate(768 96)">
+                  <circle class="wf-bot-bg" cx="0" cy="0" r="11"/>
+                  <rect class="wf-bot" x="-5.5" y="-4" width="11" height="8" rx="2.5"/>
+                  <path class="wf-bot" d="M0 -4v-2.6"/>
+                  <circle class="wf-bot" cx="0" cy="-7.6" r="1"/>
+                  <path class="wf-bot" d="M-2.4 -1h.01M2.4 -1h.01"/>
+                  <path class="wf-bot" d="M-1.8 1.8h3.6"/>
+                </g>
+              </g>
+
+              <!-- OUT -->
+              <g class="wf-hit" data-node="natija" tabindex="0" role="button" aria-label="Natija tuguni haqida">
+                <rect class="wf-box wf-box-out" x="824" y="92" width="56" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(843 112)">
+                  <path class="wf-ic wf-ic-out" d="M2 9.5l4.5 4.5L16 4"/>
+                </g>
+                <text class="wf-title" x="852" y="166" text-anchor="middle" font-size="12">Hisobot</text>
+              </g>
+
+            </svg>
+          </div>
+
+          <div class="node-info idle" id="node-info">
+            <p>Tugun ustiga bosing &mdash; nima qilishi haqida qisqa ma'lumot chiqadi.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ NAMUNALAR ============ -->
+      <section class="band band-alt">
+        <div class="wrap">
+          <h2 class="sec-h">Namunalar</h2>
+
+          <div class="carousel" id="shots">
+            <div class="car-track" id="car-track">
+              <figure class="car-item">
+                <img src="images/visual-inspection/vi-1.png"
+                     alt="Yuklovchi texnika: nuqson topilmadi, texnika yaxshi holatda"
+                     loading="lazy">
+              </figure>
+
+              <figure class="car-item">
+                <img src="images/visual-inspection/vi-2.png"
+                     alt="Sanoat ventilyatori: motor korpusida korroziya aniqlandi va tozalash tavsiya etildi"
+                     loading="lazy">
+              </figure>
+
+              <figure class="car-item">
+                <img src="images/visual-inspection/vi-3.png"
+                     alt="Gaz quvuri avariyasi: kritik xavfsizlik holati, to'rtta shoshilinch chora"
+                     loading="lazy">
+              </figure>
+            </div>
+
+            <div class="car-nav">
+              <button class="car-btn" id="car-prev" type="button" aria-label="Oldingi rasm">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+              </button>
+              <div class="car-dots" id="car-dots" role="tablist" aria-label="Rasmlar"></div>
+              <button class="car-btn" id="car-next" type="button" aria-label="Keyingi rasm">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-in">
+        <span>TOIR &middot; Vizual tekshiruv</span>
+        <a href="index.html">&larr; TOIR bo'limlari</a>
+      </div>
+    </footer>
+  </div>
+
+</div>
+
+<script>
+// Canvas tugunlari haqida qisqa ma'lumot.
+(function () {
+  var DATA = {
+    'media': {
+      t: 'Rasm yoki video yuklanadi',
+      bot: false,
+      p: 'Xodim uskunani telefonda suratga oladi yoki video qiladi. Videoda ovoz ham bo’lishi mumkin — xodim ko’rganini gapirib ketsa, u ham hisobga olinadi. Og’ir fayl fon navbatiga tushadi, natija tayyor bo’lgach xabar keladi.',
+      u: ['FastAPI', 'multipart', 'background job']
+    },
+    'kadr': {
+      t: 'Video kadrlarga bo’linadi',
+      bot: false,
+      p: 'Videodan kadrlar ajratiladi va har biri 6 tadan guruhlarga bo’linadi (BATCH-001, BATCH-002 …). Hammasini birdan yuborish mumkin emas — model kontekstiga sig’maydi va narxi oshadi. Guruhlash tahlilni ham aniqroq qiladi: model bir necha kadrni yonma-yon ko’rib, tasodifiy soyani nuqsondan ajratadi.',
+      u: ['OpenCV', 'NumPy', 'BATCH-001 …']
+    },
+    'ajratish': {
+      t: 'Tasvir va ovoz ajratiladi',
+      bot: false,
+      p: 'Ikki oqim parallel ishlaydi: kadrlar nuqson uchun tekshiriladi, ovoz esa matnga o’giriladi va kadr vaqtiga moslanadi. Shunda xodim «mana shu yerda oqyapti» deganda, o’sha gap qaysi kadrga tegishli ekani aniq bo’ladi.',
+      u: ['STT', 'vaqt moslash']
+    },
+    'nuqson': {
+      t: 'Nuqson qidiriladi',
+      bot: true,
+      p: 'Har guruh uchun modelga alohida chaqiruv ketadi — 20 kadrli videoda bu 4 marta bo’ladi. Model har kadrni ko’rib chiqadi va nuqsonlarni toifalaydi: zang va korroziya, oqish, yoriq va deformatsiya, ifloslanish, elektr nosozligi. Har nuqson uchun qayerdaligi, ko’lami va ishonch darajasi yoziladi. Shubhali holatda muqobil izoh ham beriladi — «bu soya yoki kirlik bo’lishi ham mumkin».',
+      u: ['vision model', 'guruh-guruh', 'toifalash', 'ishonch darajasi']
+    },
+    'ovoz': {
+      t: 'Ovoz tasvir bilan solishtiriladi',
+      bot: true,
+      p: 'Xodim gapirgan uskuna videodagisi bilan bir xilmi — shu tekshiriladi. Agar xodim nasos haqida gapirsa-yu, videoda kompressor bo’lsa, bu nomuvofiqlik belgilanadi. Aks holda noto’g’ri uskunaga nuqson yozilib qolardi.',
+      u: ['model', 'mavzu tekshiruvi']
+    },
+    'yigish': {
+      t: 'Hisobot yig’iladi',
+      bot: true,
+      p: 'Turli kadrlarda topilgan bir xil nuqson bittaga birlashtiriladi — aks holda bitta zang o’n marta sanalardi. Har nuqsonga yakuniy jiddiylik beriladi: past, o’rta, yuqori yoki kritik. Videoda nuqson qaysi soniyada ko’ringani ham saqlanadi.',
+      u: ['model', 'birlashtirish', 'jiddiylik']
+    },
+    'natija': {
+      t: 'Hisobot qaytadi',
+      bot: false,
+      p: 'Natijada nuqsonlar ro’yxati, ularning joyi, jiddiyligi va dalil kadrlari bo’ladi. Shu hisobotdan to’g’ridan-to’g’ri ta’mirlash so’rovi ochish mumkin — nuqson tavsifi work-order bo’limiga o’tadi.',
+      u: ['JSON javob', 'work-order ga ulanadi']
+    }
+  };
+
+  var box = document.getElementById('node-info');
+  if (!box) return;
+  var hits = document.querySelectorAll('.wf-hit');
+
+  function show(key, el) {
+    var d = DATA[key];
+    if (!d) return;
+    hits.forEach(function (h) { h.classList.remove('sel'); });
+    el.classList.add('sel');
+    var tag = d.bot
+      ? '<span class="ni-bot">Model bajaradi</span>'
+      : '<span class="ni-plain">Kod bajaradi</span>';
+    var used = d.u.map(function (x) { return '<span>' + x + '</span>'; }).join('');
+    box.className = 'node-info';
+    box.innerHTML =
+      '<div class="ni-head"><h3>' + d.t + '</h3>' + tag + '</div>' +
+      '<p class="ni-text">' + d.p + '</p>' +
+      '<div class="ni-used">' + used + '</div>';
+  }
+
+  hits.forEach(function (el) {
+    el.addEventListener('click', function () {
+      show(el.getAttribute('data-node'), el);
+    });
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        show(el.getAttribute('data-node'), el);
+      }
+    });
+  });
+})();
+</script>
+
+<script>
+// Rasm karuseli.
+(function () {
+  var track = document.getElementById('car-track');
+  if (!track) return;
+
+  var items = Array.prototype.slice.call(track.querySelectorAll('.car-item'));
+  var dotsBox = document.getElementById('car-dots');
+  var prev = document.getElementById('car-prev');
+  var next = document.getElementById('car-next');
+  var at = 0;
+
+  if (!items.length) {
+    var box = document.getElementById('shots');
+    if (box) box.hidden = true;
+    return;
+  }
+
+  var dots = items.map(function (_, i) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'car-dot';
+    b.setAttribute('aria-label', (i + 1) + '-rasm');
+    b.addEventListener('click', function () { go(i); });
+    dotsBox.appendChild(b);
+    return b;
+  });
+
+  function render() {
+    items.forEach(function (el, i) {
+      el.classList.remove('is-center', 'is-left', 'is-right', 'is-far');
+      if (i === at) el.classList.add('is-center');
+      else if (i === at - 1) el.classList.add('is-left');
+      else if (i === at + 1) el.classList.add('is-right');
+      else el.classList.add('is-far');
+    });
+    dots.forEach(function (b, i) { b.classList.toggle('on', i === at); });
+    prev.disabled = at === 0;
+    next.disabled = at === items.length - 1;
+  }
+
+  function go(i) {
+    at = Math.max(0, Math.min(items.length - 1, i));
+    render();
+  }
+
+  prev.addEventListener('click', function () { go(at - 1); });
+  next.addEventListener('click', function () { go(at + 1); });
+
+  items.forEach(function (el, i) {
+    el.addEventListener('click', function () { if (i !== at) go(i); });
+  });
+
+  track.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(at - 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(at + 1); }
+  });
+
+  var lastSwipe = 0;
+  track.addEventListener('wheel', function (e) {
+    var dx = e.deltaX;
+    if (Math.abs(dx) < Math.abs(e.deltaY) || Math.abs(dx) < 12) return;
+    e.preventDefault();
+    var now = Date.now();
+    if (now - lastSwipe < 380) return;
+    lastSwipe = now;
+    go(dx > 0 ? at + 1 : at - 1);
+  }, { passive: false });
+
+  var x0 = null;
+  track.addEventListener('touchstart', function (e) {
+    x0 = e.touches[0].clientX;
+  }, { passive: true });
+  track.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 40) go(dx < 0 ? at + 1 : at - 1);
+    x0 = null;
+  });
+
+  if (items.length < 2) {
+    document.querySelector('.car-nav').style.display = 'none';
+  }
+
+  render();
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jadval optimizatsiyasi — TOIR</title>
+<meta name="description" content="Weibull taqsimoti asosida xizmat ko'rsatish oralig'ini hisoblash va tavsiya berish.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Asosiy qismga o'tish</a>
+
+<div class="shell">
+
+  <aside class="side">
+    <a class="side-brand" href="../index.html">
+      BEGZOD <br>TURDIBEKOV<span class="dot">.</span>
+      <small>AI Engineer</small>
+    </a>
+
+    <nav class="side-nav" aria-label="Asosiy">
+      <a href="../index.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+          <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+          <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+          <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+        </svg>
+        Loyihalar
+      </a>
+      <a href="../about.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="8" r="3.6"/>
+          <path d="M4.5 20a7.5 7.5 0 0115 0"/>
+        </svg>
+        Men haqimda
+      </a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <main id="main">
+
+      <!-- ============ HERO ============ -->
+      <section class="wrap hero">
+        <a class="proj-back" href="index.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 5l-7 7 7 7"/>
+          </svg>
+          TOIR &mdash; Texnik xizmat AI tizimi
+          <span class="step-n">Bo'lim 06</span>
+        </a>
+        <h1>Jadval optimizatsiyasi</h1>
+        <p class="hero-lead">
+          Xizmat ko'rsatish oralig'i odatda qo'llanmadan olinadi va yillab
+          o'zgarmaydi. Tizim esa shu uskunaning haqiqiy nosozlik tarixidan
+          Weibull taqsimotini hisoblab, oraliqni qancha bo'lishi kerakligini
+          ishonch darajasi bilan tavsiya qiladi.
+        </p>
+      </section>
+
+      <!-- ============ MAQSAD ============ -->
+      <section class="band band-alt">
+        <div class="wrap">
+          <h2 class="sec-h">Maqsad</h2>
+          <p class="sec-lead">Nima muammoni hal qiladi.</p>
+
+          <div class="purpose">
+            <p>
+              Ko'rik oralig'i noto'g'ri bo'lsa, ikki tomondan ham zarar:
+              juda tez-tez qilinsa vaqt va pul behuda ketadi, kech qilinsa
+              uskuna ko'rikkacha buzilib qoladi. Qo'llanmadagi raqam esa
+              o'rtacha sharoit uchun yozilgan &mdash; sizning
+              uskunangizning haqiqiy yuklamasini bilmaydi.
+            </p>
+            <p>
+              <b>Bu yerda oraliq haqiqiy ma'lumotdan chiqadi.</b>
+              Nosozliklar orasidagi vaqt Weibull taqsimotiga moslanadi
+              va shundan optimal oraliq hisoblanadi. Ma'lumot kam bo'lsa
+              tavsiya berilmaydi &mdash; besh hodisadan chiqarilgan
+              &laquo;aniq&raquo; raqam qo'llanmadagisidan yomonroq.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ OQIM ============ -->
+      <section class="band">
+        <div class="wrap">
+          <h2 class="sec-h">Ishlash WorkFlow</h2>
+
+          <div class="canvas">
+            <svg viewBox="0 -18 1190 400" role="img"
+                 aria-label="Jadval optimizatsiyasi oqimi: nosozlik tarixidan interval tavsiyasigacha">
+
+              <!-- ===== ulagichlar ===== -->
+              <path class="wf-link" d="M 128 120 C 154 120 156 120 180 120"/>
+              <path class="wf-link" d="M 280 120 C 306 120 308 120 332 120"/>
+              <path class="wf-link" d="M 432 120 C 458 120 460 120 484 120"/>
+              <path class="wf-link" d="M 584 120 C 610 120 612 120 636 120"/>
+              <path class="wf-link" d="M 736 120 C 762 120 764 120 788 120"/>
+              <path class="wf-link" d="M 888 120 C 914 120 916 120 940 120"/>
+
+              <!-- IN -->
+              <g class="wf-hit" data-node="tarix" tabindex="0" role="button" aria-label="Nosozlik tarixi tuguni haqida">
+                <rect class="wf-box wf-box-in" x="28" y="92" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(69 111)">
+                  <ellipse class="wf-ic wf-ic-in" cx="10" cy="4" rx="7.5" ry="2.8"/>
+                  <path class="wf-ic wf-ic-in" d="M2.5 4v9c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8V4"/>
+                </g>
+                <text class="wf-title" x="78" y="166" text-anchor="middle" font-size="12">Nosozlik tarixi</text>
+                <text class="wf-sub" x="78" y="180" text-anchor="middle" font-size="9.5">rejali ishlar bilan</text>
+              </g>
+
+              <!-- Batch tahlil -->
+              <g class="wf-hit" data-node="moslash" tabindex="0" role="button" aria-label="Hodisa moslashtirish tuguni haqida">
+                <rect class="wf-stack" x="190" y="82" width="100" height="56" rx="12"/>
+                <rect class="wf-stack" x="185" y="87" width="100" height="56" rx="12"/>
+                <rect class="wf-box wf-box-ai" x="180" y="92" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(220 111)">
+                  <path class="wf-ic" d="M2 5h6M12 5h6M2 15h6M12 15h6"/>
+                  <path class="wf-ic" d="M8 5l4 10M8 15l4-10"/>
+                </g>
+                <text class="wf-title" x="230" y="166" text-anchor="middle" font-size="12">Hodisa moslashadi</text>
+                <text class="wf-sub" x="230" y="180" text-anchor="middle" font-size="9.5">qaysi rejali ishga</text>
+                <text class="wf-loop-t wf-batch" x="230" y="194" text-anchor="middle" font-size="9">guruh-guruh &times; N marta</text>
+                <g transform="translate(276 96)">
+                  <circle class="wf-bot-bg" cx="0" cy="0" r="11"/>
+                  <rect class="wf-bot" x="-5.5" y="-4" width="11" height="8" rx="2.5"/>
+                  <path class="wf-bot" d="M0 -4v-2.6"/>
+                  <circle class="wf-bot" cx="0" cy="-7.6" r="1"/>
+                  <path class="wf-bot" d="M-2.4 -1h.01M2.4 -1h.01"/>
+                  <path class="wf-bot" d="M-1.8 1.8h3.6"/>
+                </g>
+              </g>
+
+              <!-- Umr namunalari -->
+              <g class="wf-hit" data-node="umr" tabindex="0" role="button" aria-label="Umr namunalari tuguni haqida">
+                <rect class="wf-box" x="332" y="92" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(372 111)">
+                  <path class="wf-ic wf-ic-plain" d="M2 17V3M2 17h16"/>
+                  <path class="wf-ic wf-ic-plain" d="M5 14l3-5 3 3 5-8"/>
+                </g>
+                <text class="wf-title" x="382" y="166" text-anchor="middle" font-size="12">Umr namunalari</text>
+                <text class="wf-sub" x="382" y="180" text-anchor="middle" font-size="9.5">nosozliklar oralig'i</text>
+              </g>
+
+              <!-- Weibull -->
+              <g class="wf-hit" data-node="weibull" tabindex="0" role="button" aria-label="Weibull taqsimoti tuguni haqida">
+                <rect class="wf-box" x="484" y="92" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(524 111)">
+                  <path class="wf-ic wf-ic-plain" d="M1 17c4 0 5-13 9-13s5 13 9 13"/>
+                </g>
+                <text class="wf-title" x="534" y="166" text-anchor="middle" font-size="12">Weibull moslanadi</text>
+                <text class="wf-sub" x="534" y="180" text-anchor="middle" font-size="9.5">SciPy &#183; shakl va miqyos</text>
+              </g>
+
+              <!-- Bootstrap -->
+              <g class="wf-hit" data-node="bootstrap" tabindex="0" role="button" aria-label="Bootstrap tuguni haqida">
+                <rect class="wf-stack" x="646" y="82" width="100" height="56" rx="12"/>
+                <rect class="wf-stack" x="641" y="87" width="100" height="56" rx="12"/>
+                <rect class="wf-box" x="636" y="92" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(676 111)">
+                  <path class="wf-ic wf-ic-plain" d="M3 10a7 7 0 1114 0"/>
+                  <path class="wf-ic wf-ic-plain" d="M3 10l-2-2M3 10l2-2M17 10l-2 2M17 10l2 2"/>
+                </g>
+                <text class="wf-title" x="686" y="166" text-anchor="middle" font-size="12">Bootstrap</text>
+                <text class="wf-sub" x="686" y="180" text-anchor="middle" font-size="9.5">ishonch oralig'i</text>
+                <text class="wf-loop-t wf-batch" x="686" y="194" text-anchor="middle" font-size="9">qayta-qayta namuna</text>
+              </g>
+
+              <!-- Tavsiya -->
+              <g class="wf-hit" data-node="tavsiya" tabindex="0" role="button" aria-label="Tavsiya tuguni haqida">
+                <rect class="wf-box wf-box-ai" x="788" y="92" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(828 111)">
+                  <circle class="wf-ic" cx="10" cy="8" r="5.5"/>
+                  <path class="wf-ic" d="M7.5 15h5M8.5 18h3"/>
+                </g>
+                <text class="wf-title" x="838" y="166" text-anchor="middle" font-size="12">Tavsiya yoziladi</text>
+                <text class="wf-sub" x="838" y="180" text-anchor="middle" font-size="9.5">sabab izohi bilan</text>
+                <g transform="translate(884 96)">
+                  <circle class="wf-bot-bg" cx="0" cy="0" r="11"/>
+                  <rect class="wf-bot" x="-5.5" y="-4" width="11" height="8" rx="2.5"/>
+                  <path class="wf-bot" d="M0 -4v-2.6"/>
+                  <circle class="wf-bot" cx="0" cy="-7.6" r="1"/>
+                  <path class="wf-bot" d="M-2.4 -1h.01M2.4 -1h.01"/>
+                  <path class="wf-bot" d="M-1.8 1.8h3.6"/>
+                </g>
+              </g>
+
+              <!-- OUT -->
+              <g class="wf-hit" data-node="natija" tabindex="0" role="button" aria-label="Natija tuguni haqida">
+                <rect class="wf-box wf-box-out" x="940" y="92" width="56" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(959 112)">
+                  <path class="wf-ic wf-ic-out" d="M2 9.5l4.5 4.5L16 4"/>
+                </g>
+                <text class="wf-title" x="968" y="166" text-anchor="middle" font-size="12">Interval</text>
+              </g>
+
+            </svg>
+          </div>
+
+          <div class="node-info idle" id="node-info">
+            <p>Tugun ustiga bosing &mdash; nima qilishi haqida qisqa ma'lumot chiqadi.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ NAMUNALAR ============ -->
+      <section class="band band-alt">
+        <div class="wrap">
+          <h2 class="sec-h">Namunalar</h2>
+
+          <div class="carousel" id="shots">
+            <div class="car-track" id="car-track">
+              <!-- RASM QO'SHISH: projects/toir/images/schedule/ papkasiga soling. -->
+            </div>
+
+            <div class="car-nav">
+              <button class="car-btn" id="car-prev" type="button" aria-label="Oldingi rasm">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+              </button>
+              <div class="car-dots" id="car-dots" role="tablist" aria-label="Rasmlar"></div>
+              <button class="car-btn" id="car-next" type="button" aria-label="Keyingi rasm">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-in">
+        <span>TOIR &middot; Jadval optimizatsiyasi</span>
+        <a href="index.html">&larr; TOIR bo'limlari</a>
+      </div>
+    </footer>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var DATA = {
+    'tarix': {
+      t: 'Nosozlik tarixi yuklanadi',
+      bot: false,
+      p: 'Uskunaning nosozlik hodisalari va rejali ish jadvali bazadan olinadi. Davr ko’rsatilmasa sukut bo’yicha oxirgi yillar qamraladi — juda qisqa davr statistikani ishonchsiz qiladi, juda uzun esa eskirgan ish sharoitini hisobga oladi.',
+      u: ['PostgreSQL', 'rejali ishlar', 'davr']
+    },
+    'moslash': {
+      t: 'Hodisa rejali ishga moslashadi',
+      bot: true,
+      p: 'Har nosozlik qaysi rejali ish turiga tegishli ekani aniqlanadi: moylash, podshipnik almashtirish, elektr qismi. Hodisalar guruhlab yuboriladi — har guruh uchun alohida model chaqiruvi. Moslik topilmasa hodisa hisobga olinmaydi: noto’g’ri joyga biriktirilgan hodisa butun hisobni buzadi.',
+      u: ['model', 'guruh-guruh', 'moslik bahosi']
+    },
+    'umr': {
+      t: 'Umr namunalari quriladi',
+      bot: false,
+      p: 'Har ish turi uchun nosozliklar orasidagi vaqt hisoblanadi — bu «umr namunasi». Hali buzilmagan davr ham hisobga olinadi (senzura qilingan namuna): uskuna 200 kun ishlab hali buzilmagan bo’lsa, bu ham ma’lumot. Yaqin hodisalar bitta deb qaraladi — bitta ta’mirlash ikki marta yozilgan bo’lishi mumkin.',
+      u: ['senzura', 'birlashtirish oynasi']
+    },
+    'weibull': {
+      t: 'Weibull taqsimoti moslanadi',
+      bot: false,
+      p: 'Umr namunalariga Weibull taqsimoti moslanadi — u ishonchlilik nazariyasida standart. Ikki parametr chiqadi: shakl (beta) va miqyos. Beta birdan katta bo’lsa uskuna eskirmoqda, birga teng bo’lsa buzilish tasodifiy — bu farq tavsiyani belgilaydi. Namuna kam bo’lsa moslash bajarilmaydi.',
+      u: ['SciPy', 'weibull_min', 'Kaplan-Meier']
+    },
+    'bootstrap': {
+      t: 'Ishonch oralig’i hisoblanadi',
+      bot: false,
+      p: 'Bitta raqam yetarli emas — u qanchalik ishonchli ekani ham kerak. Mavjud namunalardan qayta-qayta tasodifiy tanlov olinadi va har safar Weibull qayta moslanadi. Natijada intervalning pastki va yuqori chegarasi chiqadi. Tavsiyada ehtiyotkor chegara olinadi.',
+      u: ['bootstrap', 'qayta namuna', 'chegaralar']
+    },
+    'tavsiya': {
+      t: 'Tavsiya yoziladi',
+      bot: true,
+      p: 'Hisoblangan interval joriy jadval bilan solishtiriladi va tavsiya matni yoziladi: nima uchun oraliq o’zgartirilishi kerak, qaysi ma’lumotga tayanilgan. Ishonch darajasi past bo’lsa, bu ochiq aytiladi — «ma’lumot kam, joriy oraliq saqlansin».',
+      u: ['model', 'izoh matni']
+    },
+    'natija': {
+      t: 'Interval tavsiyasi qaytadi',
+      bot: false,
+      p: 'Har ish turi uchun: joriy oraliq, tavsiya etilgan oraliq, ishonch darajasi va sabab izohi. Hisob og’ir — bootstrap yuzlab marta qayta hisoblaydi — shuning uchun fon navbatida bajariladi.',
+      u: ['JSON javob', 'background job']
+    }
+  };
+
+  var box = document.getElementById('node-info');
+  if (!box) return;
+  var hits = document.querySelectorAll('.wf-hit');
+
+  function show(key, el) {
+    var d = DATA[key];
+    if (!d) return;
+    hits.forEach(function (h) { h.classList.remove('sel'); });
+    el.classList.add('sel');
+    var tag = d.bot
+      ? '<span class="ni-bot">Model bajaradi</span>'
+      : '<span class="ni-plain">Kod bajaradi</span>';
+    var used = d.u.map(function (x) { return '<span>' + x + '</span>'; }).join('');
+    box.className = 'node-info';
+    box.innerHTML =
+      '<div class="ni-head"><h3>' + d.t + '</h3>' + tag + '</div>' +
+      '<p class="ni-text">' + d.p + '</p>' +
+      '<div class="ni-used">' + used + '</div>';
+  }
+
+  hits.forEach(function (el) {
+    el.addEventListener('click', function () { show(el.getAttribute('data-node'), el); });
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(el.getAttribute('data-node'), el); }
+    });
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var track = document.getElementById('car-track');
+  if (!track) return;
+  var items = Array.prototype.slice.call(track.querySelectorAll('.car-item'));
+  var dotsBox = document.getElementById('car-dots');
+  var prev = document.getElementById('car-prev');
+  var next = document.getElementById('car-next');
+  var at = 0;
+
+  if (!items.length) {
+    var box = document.getElementById('shots');
+    if (box) box.hidden = true;
+    return;
+  }
+
+  var dots = items.map(function (_, i) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'car-dot';
+    b.setAttribute('aria-label', (i + 1) + '-rasm');
+    b.addEventListener('click', function () { go(i); });
+    dotsBox.appendChild(b);
+    return b;
+  });
+
+  function render() {
+    items.forEach(function (el, i) {
+      el.classList.remove('is-center', 'is-left', 'is-right', 'is-far');
+      if (i === at) el.classList.add('is-center');
+      else if (i === at - 1) el.classList.add('is-left');
+      else if (i === at + 1) el.classList.add('is-right');
+      else el.classList.add('is-far');
+    });
+    dots.forEach(function (b, i) { b.classList.toggle('on', i === at); });
+    prev.disabled = at === 0;
+    next.disabled = at === items.length - 1;
+  }
+
+  function go(i) { at = Math.max(0, Math.min(items.length - 1, i)); render(); }
+
+  prev.addEventListener('click', function () { go(at - 1); });
+  next.addEventListener('click', function () { go(at + 1); });
+  items.forEach(function (el, i) {
+    el.addEventListener('click', function () { if (i !== at) go(i); });
+  });
+  track.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(at - 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(at + 1); }
+  });
+
+  var lastSwipe = 0;
+  track.addEventListener('wheel', function (e) {
+    var dx = e.deltaX;
+    if (Math.abs(dx) < Math.abs(e.deltaY) || Math.abs(dx) < 12) return;
+    e.preventDefault();
+    var now = Date.now();
+    if (now - lastSwipe < 380) return;
+    lastSwipe = now;
+    go(dx > 0 ? at + 1 : at - 1);
+  }, { passive: false });
+
+  var x0 = null;
+  track.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 40) go(dx < 0 ? at + 1 : at - 1);
+    x0 = null;
+  });
+
+  if (items.length < 2) { document.querySelector('.car-nav').style.display = 'none'; }
+  render();
+})();
+</script>
+
+</body>
+</html>

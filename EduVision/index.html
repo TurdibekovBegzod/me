@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EduVision — Davomat va Tahlil</title>
+<meta name="description" content="Kamera orqali yuzni tanib o'quvchi davomatini belgilaydigan dastur.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Asosiy qismga o'tish</a>
+
+<div class="shell">
+
+  <aside class="side">
+    <a class="side-brand" href="../index.html">
+      BEGZOD <br>TURDIBEKOV<span class="dot">.</span>
+      <small>AI Engineer</small>
+    </a>
+
+    <nav class="side-nav" aria-label="Asosiy">
+      <a href="../index.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+          <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+          <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+          <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+        </svg>
+        Loyihalar
+      </a>
+      <a href="../about.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="8" r="3.6"/>
+          <path d="M4.5 20a7.5 7.5 0 0115 0"/>
+        </svg>
+        Men haqimda
+      </a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <main id="main">
+
+      <!-- ============ HERO ============ -->
+      <section class="wrap hero">
+        <a class="crumb" href="../index.html">&larr; Barcha loyihalar</a>
+        <p class="eyebrow">Kompyuter ko'rish &middot; Ta'lim</p>
+        <div class="proj-meta">
+          <span class="when-tag">2025</span>
+        </div>
+        <h1>EduVision &mdash; Davomat va Tahlil</h1>
+        <p class="hero-lead">Kamera yoki videodan o'quvchi yuzini tanib, davomatni avtomatik belgilaydi va o'zlashtirishni tahlil qiladi.</p>
+      </section>
+
+      <!-- ============ NAMUNALAR ============ -->
+      <section class="band band-alt">
+        <div class="wrap">
+          <h2 class="sec-h">Namunalar</h2>
+
+          <div class="carousel" id="shots">
+            <div class="car-track" id="car-track">
+
+              <figure class="car-item">
+                <img src="images/Screenshot%202026-09-24%20165210.png" alt="EduVision dasturi: videodan o&#8217;quvchi yuzi tanib olinib, ismi va ishonch darajasi bilan belgilangan" loading="lazy">
+              </figure>
+
+              <figure class="car-item">
+                <img src="images/Screenshot%202026-09-24%20165218.png" alt="EduVision dasturi: videodan o&#8217;quvchi yuzi tanib olinib, ismi va ishonch darajasi bilan belgilangan" loading="lazy">
+              </figure>
+
+              <figure class="car-item">
+                <img src="images/Screenshot%202026-09-24%20165232.png" alt="EduVision dasturi: videodan o&#8217;quvchi yuzi tanib olinib, ismi va ishonch darajasi bilan belgilangan" loading="lazy">
+              </figure>
+
+              <figure class="car-item">
+                <img src="images/Screenshot%202026-09-24%20165253.png" alt="EduVision dasturi: videodan o&#8217;quvchi yuzi tanib olinib, ismi va ishonch darajasi bilan belgilangan" loading="lazy">
+              </figure>
+
+              <figure class="car-item">
+                <img src="images/Screenshot%202026-09-24%20165301.png" alt="EduVision dasturi: videodan o&#8217;quvchi yuzi tanib olinib, ismi va ishonch darajasi bilan belgilangan" loading="lazy">
+              </figure>
+
+              <figure class="car-item">
+                <img src="images/Screenshot%202026-09-24%20165312.png" alt="EduVision dasturi: videodan o&#8217;quvchi yuzi tanib olinib, ismi va ishonch darajasi bilan belgilangan" loading="lazy">
+              </figure>
+
+              <figure class="car-item">
+                <img src="images/Screenshot%202026-09-24%20165348.png" alt="EduVision dasturi: videodan o&#8217;quvchi yuzi tanib olinib, ismi va ishonch darajasi bilan belgilangan" loading="lazy">
+              </figure>
+
+            </div>
+
+            <div class="car-nav">
+              <button class="car-btn" id="car-prev" type="button" aria-label="Oldingi rasm">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+              </button>
+              <div class="car-dots" id="car-dots" role="tablist" aria-label="Rasmlar"></div>
+              <button class="car-btn" id="car-next" type="button" aria-label="Keyingi rasm">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-in">
+        <span>EduVision &mdash; Davomat va Tahlil</span>
+        <a href="../index.html">&larr; Barcha loyihalar</a>
+      </div>
+    </footer>
+  </div>
+
+</div>
+
+<script>
+// Rasm karuseli: markazdagi katta, chetdagilar kichik.
+// O'ng/chapga surilganda navbatdagisi markazni egallaydi.
+(function () {
+  var track = document.getElementById('car-track');
+  if (!track) return;
+
+  var items = Array.prototype.slice.call(track.querySelectorAll('.car-item'));
+  var dotsBox = document.getElementById('car-dots');
+  var prev = document.getElementById('car-prev');
+  var next = document.getElementById('car-next');
+  var at = 0;
+
+  var dots = items.map(function (_, i) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'car-dot';
+    b.setAttribute('aria-label', (i + 1) + '-rasm');
+    b.addEventListener('click', function () { go(i); });
+    dotsBox.appendChild(b);
+    return b;
+  });
+
+  function render() {
+    items.forEach(function (el, i) {
+      el.classList.remove('is-center', 'is-left', 'is-right', 'is-far');
+      if (i === at) el.classList.add('is-center');
+      else if (i === at - 1) el.classList.add('is-left');
+      else if (i === at + 1) el.classList.add('is-right');
+      else el.classList.add('is-far');
+    });
+    dots.forEach(function (b, i) { b.classList.toggle('on', i === at); });
+    prev.disabled = at === 0;
+    next.disabled = at === items.length - 1;
+  }
+
+  function go(i) {
+    at = Math.max(0, Math.min(items.length - 1, i));
+    render();
+  }
+
+  prev.addEventListener('click', function () { go(at - 1); });
+  next.addEventListener('click', function () { go(at + 1); });
+
+  // Rasmni bosish ham uni markazga olib keladi.
+  items.forEach(function (el, i) {
+    el.addEventListener('click', function () { if (i !== at) go(i); });
+  });
+
+  // Klaviatura
+  track.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(at - 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(at + 1); }
+  });
+
+  // Touchpad'da ikki barmoq bilan surish (yoki sichqoncha g'ildiragi
+  // yon tomonga). Brauzer buni gorizontal scroll deb yuboradi.
+  var lastSwipe = 0;
+  track.addEventListener('wheel', function (e) {
+    var dx = e.deltaX;
+    if (Math.abs(dx) < Math.abs(e.deltaY) || Math.abs(dx) < 12) return;
+    e.preventDefault();
+    var now = Date.now();
+    if (now - lastSwipe < 380) return;
+    lastSwipe = now;
+    go(dx > 0 ? at + 1 : at - 1);
+  }, { passive: false });
+
+  // Telefonda surish
+  var x0 = null;
+  track.addEventListener('touchstart', function (e) {
+    x0 = e.touches[0].clientX;
+  }, { passive: true });
+  track.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 40) go(dx < 0 ? at + 1 : at - 1);
+    x0 = null;
+  });
+
+  // Bitta rasm bo'lsa boshqaruv keraksiz.
+  if (items.length < 2) {
+    document.querySelector('.car-nav').style.display = 'none';
+  }
+
+  render();
+})();
+</script>
+
+</body>
+</html>

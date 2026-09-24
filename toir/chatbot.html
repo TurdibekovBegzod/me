@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chatbot — TOIR</title>
+<meta name="description" content="Bazaga oddiy tilda savol berish: Text-to-SQL, RAG va ko'p tilli javob.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Asosiy qismga o'tish</a>
+
+<div class="shell">
+
+  <aside class="side">
+    <a class="side-brand" href="../index.html">
+      BEGZOD <br>TURDIBEKOV<span class="dot">.</span>
+      <small>AI Engineer</small>
+    </a>
+
+    <nav class="side-nav" aria-label="Asosiy">
+      <a href="../index.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+          <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+          <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+          <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+        </svg>
+        Loyihalar
+      </a>
+      <a href="../about.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="8" r="3.6"/>
+          <path d="M4.5 20a7.5 7.5 0 0115 0"/>
+        </svg>
+        Men haqimda
+      </a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <main id="main">
+
+      <!-- ============ HERO ============ -->
+      <section class="wrap hero">
+        <a class="proj-back" href="index.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 5l-7 7 7 7"/>
+          </svg>
+          TOIR &mdash; Texnik xizmat AI tizimi
+          <span class="step-n">Bo'lim 01</span>
+        </a>
+        <h1>Chatbot</h1>
+        <p class="hero-lead">
+          Xodim bazaga oddiy tilda savol beradi. Tizim savolni SQL ga
+          aylantiradi, bazada bajaradi va natijani tushunarli gap qilib
+          qaytaradi.
+        </p>
+      </section>
+
+      <!-- ============ MAQSAD ============ -->
+      <section class="band band-alt">
+        <div class="wrap">
+          <h2 class="sec-h">Maqsad</h2>
+          
+          <div class="purpose">
+            <p>
+              TOIR bazasida o'nlab jadval bor: uskunalar, ta'mirlash
+              so'rovlari, ehtiyot qismlar, nosozliklar tarixi. Oddiy xodim
+              SQL bilmaydi, hisobot esa har savol uchun alohida yozilmaydi.
+            </p>
+            <p>
+              <b>Chatbot shu bo'shliqni to'ldiradi:</b> &laquo;Denza n9 uchun
+              nechta work order bor?&raquo; deb yozish yetarli. Javob har doim
+              bazadagi haqiqiy raqamdan chiqadi &mdash; model o'zidan raqam
+              o'ylab topmaydi, topilmasa esa buni ochiq aytadi.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ OQIM ============ -->
+      <section class="band">
+        <div class="wrap">
+          <h2 class="sec-h">Ishlash WorkFlow</h2>
+          
+
+          <div class="canvas">
+            <svg viewBox="0 -18 1190 348" role="img"
+                 aria-label="Chatbot oqimi: savol kelishidan javob qaytishigacha">
+
+              <!-- ===== asosiy yo&#8217;l ===== -->
+              <path class="wf-link" d="M 148 120 C 174 120 176 120 200 120"/>
+              <path class="wf-link" d="M 300 112 C 330 112 330 70 360 70"/>
+              <path class="wf-link" d="M 300 130 C 330 130 330 250 360 250"/>
+              <path class="wf-link" d="M 460 70 C 486 70 488 70 512 70"/>
+              <path class="wf-link" d="M 612 70 C 638 70 640 70 664 70"/>
+              <path class="wf-link" d="M 764 70 C 790 70 792 70 816 70"/>
+              <path class="wf-link" d="M 916 70 C 948 70 948 160 976 160"/>
+              <path class="wf-link" d="M 460 250 C 700 250 750 160 976 160"/>
+              <path class="wf-link" d="M 1076 160 C 1098 160 1102 160 1120 160"/>
+
+              <!-- ===== LOOP: xato bo&#8217;lsa qayta ===== -->
+              <path class="wf-loop" d="M 714 36 C 714 2 460 2 410 2 C 386 2 386 20 386 36"/>
+              <text class="wf-loop-t" x="550" y="-6" text-anchor="middle" font-size="9.6">
+                xato yoki natija bo&#8217;sh &#8212; qayta (2 martagacha)
+              </text>
+
+              <!-- IN: savol -->
+              <g class="wf-hit" data-node="savol" tabindex="0" role="button" aria-label="Savol tuguni haqida">
+                <rect class="wf-box wf-box-in" x="48" y="92" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(89 110)">
+                  <path class="wf-ic wf-ic-in" d="M1 8a7 7 0 017-7h4a7 7 0 010 14H6l-5 3z"/>
+                </g>
+                <text class="wf-title" x="98" y="166" text-anchor="middle" font-size="12">Savol</text>
+                <text class="wf-sub" x="98" y="180" text-anchor="middle" font-size="9.5">FastAPI &#183; JWT</text>
+              </g>
+
+              <!-- Router -->
+              <g class="wf-hit" data-node="yonalish" tabindex="0" role="button" aria-label="Yo&#8217;nalish tuguni haqida">
+                <rect class="wf-box wf-box-ai" x="200" y="92" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(240 111)">
+                  <path class="wf-ic" d="M2 4h16M2 10h10M2 16h13"/>
+                  <circle class="wf-ic" cx="17" cy="10" r="2.4"/>
+                </g>
+                <text class="wf-title" x="250" y="166" text-anchor="middle" font-size="12">Yo&#8217;nalish</text>
+                <text class="wf-sub" x="250" y="180" text-anchor="middle" font-size="9.5">LangGraph</text>
+                <circle class="wf-dot" cx="304" cy="112" r="2.8"/>
+                <circle class="wf-dot" cx="304" cy="130" r="2.8"/>
+                <g transform="translate(296 96)">
+                  <circle class="wf-bot-bg" cx="0" cy="0" r="11"/>
+                  <rect class="wf-bot" x="-5.5" y="-4" width="11" height="8" rx="2.5"/>
+                  <path class="wf-bot" d="M0 -4v-2.6"/>
+                  <circle class="wf-bot" cx="0" cy="-7.6" r="1"/>
+                  <path class="wf-bot" d="M-2.4 -1h.01M2.4 -1h.01"/>
+                  <path class="wf-bot" d="M-1.8 1.8h3.6"/>
+                </g>
+              </g>
+
+              <!-- RAG -->
+              <g class="wf-hit" data-node="jadval" tabindex="0" role="button" aria-label="Jadval qidirish tuguni haqida">
+                <rect class="wf-box" x="360" y="42" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(401 60)">
+                  <circle class="wf-ic wf-ic-plain" cx="8" cy="8" r="6"/>
+                  <path class="wf-ic wf-ic-plain" d="M12.5 12.5L18 18"/>
+                </g>
+                <text class="wf-title" x="410" y="116" text-anchor="middle" font-size="12">Jadval qidirish</text>
+                <text class="wf-sub" x="410" y="130" text-anchor="middle" font-size="9.5">FAISS &#183; RAG</text>
+              </g>
+
+              <!-- SQL -->
+              <g class="wf-hit" data-node="sql" tabindex="0" role="button" aria-label="SQL yozish tuguni haqida">
+                <rect class="wf-box wf-box-ai" x="512" y="42" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(552 60)">
+                  <path class="wf-ic" d="M7 3L2 10l5 7M13 3l5 7-5 7"/>
+                </g>
+                <text class="wf-title" x="562" y="116" text-anchor="middle" font-size="12">SQL yozish</text>
+                <text class="wf-sub" x="562" y="130" text-anchor="middle" font-size="9.5">temp = 0</text>
+                <g transform="translate(608 46)">
+                  <circle class="wf-bot-bg" cx="0" cy="0" r="11"/>
+                  <rect class="wf-bot" x="-5.5" y="-4" width="11" height="8" rx="2.5"/>
+                  <path class="wf-bot" d="M0 -4v-2.6"/>
+                  <circle class="wf-bot" cx="0" cy="-7.6" r="1"/>
+                  <path class="wf-bot" d="M-2.4 -1h.01M2.4 -1h.01"/>
+                  <path class="wf-bot" d="M-1.8 1.8h3.6"/>
+                </g>
+              </g>
+
+              <!-- Tekshiruv -->
+              <g class="wf-hit" data-node="tekshiruv" tabindex="0" role="button" aria-label="Tekshiruv tuguni haqida">
+                <rect class="wf-box" x="664" y="42" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(704 59)">
+                  <path class="wf-ic wf-ic-plain" d="M10 1.5l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9v-6z"/>
+                  <path class="wf-ic wf-ic-plain" d="M6.5 10l2.5 2.5 4.5-4.5"/>
+                </g>
+                <text class="wf-title" x="714" y="116" text-anchor="middle" font-size="12">Tekshiruv</text>
+                <text class="wf-sub" x="714" y="130" text-anchor="middle" font-size="9.5">faqat SELECT</text>
+              </g>
+
+              <!-- Baza -->
+              <g class="wf-hit" data-node="baza" tabindex="0" role="button" aria-label="PostgreSQL tuguni haqida">
+                <rect class="wf-box" x="816" y="42" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(856 61)">
+                  <ellipse class="wf-ic wf-ic-plain" cx="10" cy="4" rx="7.5" ry="2.8"/>
+                  <path class="wf-ic wf-ic-plain" d="M2.5 4v9c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8V4"/>
+                </g>
+                <text class="wf-title" x="866" y="116" text-anchor="middle" font-size="12">PostgreSQL</text>
+                <text class="wf-sub" x="866" y="130" text-anchor="middle" font-size="9.5">read-only</text>
+              </g>
+
+              <!-- Suhbat -->
+              <g class="wf-hit" data-node="suhbat" tabindex="0" role="button" aria-label="Oddiy suhbat tuguni haqida">
+                <rect class="wf-box wf-box-ai" x="360" y="222" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(401 240)">
+                  <path class="wf-ic" d="M1 8a7 7 0 017-7h4a7 7 0 010 14H6l-5 3z"/>
+                </g>
+                <text class="wf-title" x="410" y="296" text-anchor="middle" font-size="12">Oddiy suhbat</text>
+                <text class="wf-sub" x="410" y="310" text-anchor="middle" font-size="9.5">bazasiz javob</text>
+                <g transform="translate(456 226)">
+                  <circle class="wf-bot-bg" cx="0" cy="0" r="11"/>
+                  <rect class="wf-bot" x="-5.5" y="-4" width="11" height="8" rx="2.5"/>
+                  <path class="wf-bot" d="M0 -4v-2.6"/>
+                  <circle class="wf-bot" cx="0" cy="-7.6" r="1"/>
+                  <path class="wf-bot" d="M-2.4 -1h.01M2.4 -1h.01"/>
+                  <path class="wf-bot" d="M-1.8 1.8h3.6"/>
+                </g>
+              </g>
+
+              <!-- Javob yozish -->
+              <g class="wf-hit" data-node="javob-yozish" tabindex="0" role="button" aria-label="Javob yozish tuguni haqida">
+                <rect class="wf-box wf-box-ai" x="976" y="132" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(1016 150)">
+                  <path class="wf-ic" d="M2 16l2-5 9-9 3 3-9 9z"/>
+                  <path class="wf-ic" d="M2 18h16"/>
+                </g>
+                <text class="wf-title" x="1026" y="206" text-anchor="middle" font-size="12">Javob yozish</text>
+                <text class="wf-sub" x="1026" y="220" text-anchor="middle" font-size="9.5">7 xil shakl</text>
+                <g transform="translate(1072 136)">
+                  <circle class="wf-bot-bg" cx="0" cy="0" r="11"/>
+                  <rect class="wf-bot" x="-5.5" y="-4" width="11" height="8" rx="2.5"/>
+                  <path class="wf-bot" d="M0 -4v-2.6"/>
+                  <circle class="wf-bot" cx="0" cy="-7.6" r="1"/>
+                  <path class="wf-bot" d="M-2.4 -1h.01M2.4 -1h.01"/>
+                  <path class="wf-bot" d="M-1.8 1.8h3.6"/>
+                </g>
+              </g>
+
+              <!-- OUT -->
+              <g class="wf-hit" data-node="javob" tabindex="0" role="button" aria-label="Javob tuguni haqida">
+                <rect class="wf-box wf-box-out" x="1120" y="132" width="56" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(1139 152)">
+                  <path class="wf-ic wf-ic-out" d="M2 9.5l4.5 4.5L16 4"/>
+                </g>
+                <text class="wf-title" x="1148" y="206" text-anchor="middle" font-size="12">Javob</text>
+              </g>
+
+
+            </svg>
+          </div>
+          <div class="node-info idle" id="node-info">
+            <p>Tugun ustiga bosing &#8212; nima qilishi haqida qisqa ma&#8217;lumot chiqadi.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============ NAMUNALAR ============ -->
+      <section class="band band-alt">
+        <div class="wrap">
+          <h2 class="sec-h">Namunalar</h2>
+
+
+          <div class="carousel" id="shots">
+            <div class="car-track" id="car-track">
+
+              <figure class="car-item">
+                <img src="images/chat/chat-1.png"
+                     alt="Naryadlar ro&#8217;yxati ustida AI yordamchi: work-order soni va Denza n9 bo&#8217;yicha hisob so&#8217;ralgan"
+                     loading="lazy">
+              </figure>
+
+              <figure class="car-item">
+                <img src="images/chat/chat-2.png"
+                     alt="Avtopark reestri: Tahoe uskunasi bo&#8217;yicha kod, inventar raqami va holati ro&#8217;yxat bo&#8217;lib qaytarilgan"
+                     loading="lazy">
+              </figure>
+
+              <figure class="car-item">
+                <img src="images/chat/chat-3.png"
+                     alt="Ko&#8217;rik va o&#8217;lchov bo&#8217;limi: Denza n9 ga ulangan datchiklar va hisoblagichlar o&#8217;lchov birliklari bilan sanab berilgan"
+                     loading="lazy">
+              </figure>
+
+            </div>
+
+            <div class="car-nav">
+              <button class="car-btn" id="car-prev" type="button" aria-label="Oldingi rasm">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+              </button>
+              <div class="car-dots" id="car-dots" role="tablist" aria-label="Rasmlar"></div>
+              <button class="car-btn" id="car-next" type="button" aria-label="Keyingi rasm">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-in">
+        <span>TOIR &middot; Chatbot</span>
+        <a href="index.html">&larr; TOIR bo'limlari</a>
+      </div>
+    </footer>
+  </div>
+
+</div>
+
+
+<script>
+// Canvas tugunlari haqida qisqa ma'lumot. Har tugun bosilganda
+// canvas ostidagi panel yangilanadi - sahifadan chiqmasdan.
+(function () {
+  var DATA = {
+    'savol': {
+      t: 'Savol keladi',
+      bot: false,
+      p: 'Foydalanuvchi oddiy tilda yozadi. So\'rov REST API orqali keladi va token bilan tekshiriladi. Og\'ir savollar uchun fon navbati ham bor \u2014 javob tayyor bo\'lgach webhook orqali xabar boradi.',
+      u: ['FastAPI', 'JWT auth', 'background job']
+    },
+    'yonalish': {
+      t: 'Yo\'nalish tanlanadi',
+      bot: true,
+      p: 'Savol qaysi turga tegishli: oddiy suhbat, bitta so\'rovli javob yoki ko\'p bosqichli tahlil. Avval arzon qoidalar ishlaydi \u2014 hal bo\'lmasa model qaror qiladi. Model javob bermasa qoidalar zaxira bo\'lib qoladi, tizim to\'xtamaydi.',
+      u: ['LangGraph', 'model', 'regex fallback']
+    },
+    'jadval': {
+      t: 'Kerakli jadvallar topiladi',
+      bot: false,
+      p: 'Bazada o\'nlab jadval bor, lekin modelga hammasi yuborilmaydi. Savol vektorga aylantiriladi va unga ma\'no jihatdan eng yaqin jadvallar tanlanadi. Shunda kontekst kichik va aniq qoladi.',
+      u: ['FAISS', 'SentenceTransformers', 'RAG']
+    },
+    'sql': {
+      t: 'SQL yoziladi',
+      bot: true,
+      p: 'Model tanlangan schema asosida so\'rov yozadi. Temperatura nol: ustun nomi yoki JOIN sharti tasodifiy tanlansa, javob ishonarli ko\'rinadi-yu, raqam boshqa bo\'ladi \u2014 buni foydalanuvchi sezmaydi.',
+      u: ['model', 'temp = 0', 'structured output']
+    },
+    'tekshiruv': {
+      t: 'So\'rov tekshiriladi',
+      bot: false,
+      p: 'Kod SQL ni bajarishdan oldin tozalaydi: faqat SELECT ruxsat etiladi, qator soni majburan cheklanadi, izohlar olib tashlanadi. Model bazani o\'zgartira olmaydi \u2014 bu kod darajasida kafolatlangan.',
+      u: ['SQL sanitizer', 'faqat SELECT', 'LIMIT']
+    },
+    'baza': {
+      t: 'Bazada bajariladi',
+      bot: false,
+      p: 'So\'rov faqat o\'qish huquqi bilan ishlaydi. Natija qatorlari keyingi qadamga uzatiladi. Baza javob bermasa, bu ochiq aytiladi \u2014 taxminiy raqam berilmaydi.',
+      u: ['PostgreSQL', 'SQLAlchemy', 'read-only']
+    },
+    'suhbat': {
+      t: 'Oddiy suhbat',
+      bot: true,
+      p: 'Salomlashish, tizim haqidagi savol yoki mavzudan tashqari so\'rov bazaga bormaydi \u2014 model to\'g\'ridan-to\'g\'ri javob yozadi. Mavzudan tashqari savolga javob berilmaydi, lekin rad javobi ham foydalanuvchi tilida bo\'ladi.',
+      u: ['model', 'scope guard']
+    },
+    'javob-yozish': {
+      t: 'Javob yoziladi',
+      bot: true,
+      p: 'Xom jadval emas, tushunarli gap. Natija shakliga qarab yetti xil yozish uslubi bor: bitta son, reyting, sanali tarix, kesim, bo\'sh natija va boshqalar. Har shakl uchun alohida prompt \u2014 bitta umumiy prompt reytingni kesib tashlardi.',
+      u: ['model', '7 ta javob shakli', 'Markdown']
+    },
+    'javob': {
+      t: 'Javob qaytadi',
+      bot: false,
+      p: 'Javob foydalanuvchi yozgan tilda qaytadi \u2014 ruscha savolga ruscha, inglizchaga inglizcha. Tillar ro\'yxati yo\'q: model biladigan har qanday til ishlaydi.',
+      u: ['ko\'p tilli', 'JSON javob']
+    }
+  };
+
+  var box = document.getElementById('node-info');
+  if (!box) return;
+  var hits = document.querySelectorAll('.wf-hit');
+
+  function show(key, el) {
+    var d = DATA[key];
+    if (!d) return;
+    hits.forEach(function (h) { h.classList.remove('sel'); });
+    el.classList.add('sel');
+
+    var tag = d.bot
+      ? '<span class="ni-bot">Model bajaradi</span>'
+      : '<span class="ni-plain">Kod bajaradi</span>';
+    var used = d.u.map(function (x) { return '<span>' + x + '</span>'; }).join('');
+
+    box.className = 'node-info';
+    box.innerHTML =
+      '<div class="ni-head"><h3>' + d.t + '</h3>' + tag + '</div>' +
+      '<p class="ni-text">' + d.p + '</p>' +
+      '<div class="ni-used">' + used + '</div>';
+  }
+
+  hits.forEach(function (el) {
+    el.addEventListener('click', function () {
+      show(el.getAttribute('data-node'), el);
+    });
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        show(el.getAttribute('data-node'), el);
+      }
+    });
+  });
+})();
+</script>
+
+
+<script>
+// Rasm karuseli: markazdagi katta, chetdagilar kichik.
+// O'ng/chapga surilganda navbatdagisi markazni egallaydi.
+(function () {
+  var track = document.getElementById('car-track');
+  if (!track) return;
+
+  var items = Array.prototype.slice.call(track.querySelectorAll('.car-item'));
+  var dotsBox = document.getElementById('car-dots');
+  var prev = document.getElementById('car-prev');
+  var next = document.getElementById('car-next');
+  var at = 0;
+
+  // Nuqtalar
+  var dots = items.map(function (_, i) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'car-dot';
+    b.setAttribute('aria-label', (i + 1) + '-rasm');
+    b.addEventListener('click', function () { go(i); });
+    dotsBox.appendChild(b);
+    return b;
+  });
+
+  function render() {
+    items.forEach(function (el, i) {
+      el.classList.remove('is-center', 'is-left', 'is-right', 'is-far');
+      if (i === at) el.classList.add('is-center');
+      else if (i === at - 1) el.classList.add('is-left');
+      else if (i === at + 1) el.classList.add('is-right');
+      else el.classList.add('is-far');
+    });
+    dots.forEach(function (b, i) { b.classList.toggle('on', i === at); });
+    prev.disabled = at === 0;
+    next.disabled = at === items.length - 1;
+  }
+
+  function go(i) {
+    at = Math.max(0, Math.min(items.length - 1, i));
+    render();
+  }
+
+  prev.addEventListener('click', function () { go(at - 1); });
+  next.addEventListener('click', function () { go(at + 1); });
+
+  // Rasmni bosish ham uni markazga olib keladi.
+  items.forEach(function (el, i) {
+    el.addEventListener('click', function () { if (i !== at) go(i); });
+  });
+
+  // Klaviatura
+  track.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(at - 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(at + 1); }
+  });
+
+  // Touchpad'da ikki barmoq bilan surish (yoki sichqoncha g'ildiragi
+  // yon tomonga). Brauzer buni gorizontal scroll deb yuboradi.
+  //
+  // Ikki himoya kerak: hodisalar oqim bo'lib keladi (bitta surishda
+  // o'nlab marta), shuning uchun oxirgi o'tishdan keyin pauza qo'yiladi;
+  // va faqat gorizontal harakat hisobga olinadi - sahifani vertikal
+  // aylantirayotganda karusel o'zgarmasligi kerak.
+  var lastSwipe = 0;
+  track.addEventListener('wheel', function (e) {
+    var dx = e.deltaX;
+    if (Math.abs(dx) < Math.abs(e.deltaY) || Math.abs(dx) < 12) return;
+    e.preventDefault();
+    var now = Date.now();
+    if (now - lastSwipe < 380) return;
+    lastSwipe = now;
+    go(dx > 0 ? at + 1 : at - 1);
+  }, { passive: false });
+
+  // Telefonda surish
+  var x0 = null;
+  track.addEventListener('touchstart', function (e) {
+    x0 = e.touches[0].clientX;
+  }, { passive: true });
+  track.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 40) go(dx < 0 ? at + 1 : at - 1);
+    x0 = null;
+  });
+
+  // Bitta rasm bo'lsa boshqaruv keraksiz.
+  if (items.length < 2) {
+    document.querySelector('.car-nav').style.display = 'none';
+  }
+
+  render();
+})();
+</script>
+
+</body>
+</html>

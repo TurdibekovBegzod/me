@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Texnik pasport OCR — TOIR</title>
+<meta name="description" content="Pasport rasmi yoki PDF faylidan uskuna ma'lumotlarini ajratish: model, seriya raqami, texnik ko'rsatkichlar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Asosiy qismga o'tish</a>
+
+<div class="shell">
+
+  <aside class="side">
+    <a class="side-brand" href="../index.html">
+      BEGZOD <br>TURDIBEKOV<span class="dot">.</span>
+      <small>AI Engineer</small>
+    </a>
+
+    <nav class="side-nav" aria-label="Asosiy">
+      <a href="../index.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+          <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+          <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+          <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+        </svg>
+        Loyihalar
+      </a>
+      <a href="../about.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="8" r="3.6"/>
+          <path d="M4.5 20a7.5 7.5 0 0115 0"/>
+        </svg>
+        Men haqimda
+      </a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <main id="main">
+
+      <!-- ============ HERO ============ -->
+      <section class="wrap hero">
+        <a class="proj-back" href="index.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 5l-7 7 7 7"/>
+          </svg>
+          TOIR &mdash; Texnik xizmat AI tizimi
+          <span class="step-n">Bo'lim 03</span>
+        </a>
+        <h1>Texnik pasport OCR</h1>
+        <p class="hero-lead">
+          Uskuna pasportining rasmi yoki PDF fayli yuklanadi &mdash; tizim
+          undan model, seriya raqami, ishlab chiqaruvchi va texnik
+          ko'rsatkichlarni ajratib, tayyor maydonlar ko'rinishida qaytaradi.
+        </p>
+      </section>
+
+      <!-- ============ MAQSAD ============ -->
+      <section class="band band-alt">
+        <div class="wrap">
+          <h2 class="sec-h">Maqsad</h2>
+          <p class="sec-lead">Nima muammoni hal qiladi.</p>
+
+          <div class="purpose">
+            <p>
+              Yangi uskuna kelganda uning pasporti qo'lda tizimga
+              kiritiladi: o'nlab maydon &mdash; model, zavod raqami,
+              quvvat, ishlab chiqarilgan yil. Bu sekin ish va bitta
+              raqamda adashish keyin butun ta'mirlash tarixini buzadi.
+            </p>
+            <p>
+              <b>Bu yerda pasport suratga olinadi, qolganini tizim
+              qiladi.</b> Eng muhimi &mdash; ko'rinmagan maydon
+              o'ylab topilmaydi: u <code>null</code> bo'lib qaytadi.
+              Chala to'ldirilgan pasport yolg'on to'ldirilganidan
+              xavfsizroq.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ OQIM ============ -->
+      <section class="band">
+        <div class="wrap">
+          <h2 class="sec-h">Ishlash WorkFlow</h2>
+
+          <div class="canvas">
+            <svg viewBox="0 -18 1190 400" role="img"
+                 aria-label="Texnik pasport OCR oqimi: fayl yuklashdan tayyor maydonlargacha">
+
+              <!-- ===== ulagichlar ===== -->
+              <path class="wf-link" d="M 148 120 C 174 120 176 120 200 120"/>
+              <!-- tur bo'yicha ikki yo'l -->
+              <path class="wf-link" d="M 300 112 C 330 112 330 70 360 70"/>
+              <path class="wf-link" d="M 300 130 C 330 130 330 250 360 250"/>
+              <!-- ikkalasi modelga -->
+              <path class="wf-link" d="M 460 70 C 490 70 490 120 520 120"/>
+              <path class="wf-link" d="M 460 250 C 490 250 490 140 520 128"/>
+              <!-- model -> birlashtirish -> chiqish -->
+              <path class="wf-link" d="M 620 120 C 646 120 648 120 672 120"/>
+              <path class="wf-link" d="M 772 120 C 798 120 800 120 824 120"/>
+
+              <!-- IN: fayl -->
+              <g class="wf-hit" data-node="fayl" tabindex="0" role="button" aria-label="Fayl yuklash tuguni haqida">
+                <rect class="wf-box wf-box-in" x="48" y="92" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(89 110)">
+                  <path class="wf-ic wf-ic-in" d="M10 15V3M5 8l5-5 5 5"/>
+                  <path class="wf-ic wf-ic-in" d="M2 15v3h16v-3"/>
+                </g>
+                <text class="wf-title" x="98" y="166" text-anchor="middle" font-size="12">Fayl yuklash</text>
+                <text class="wf-sub" x="98" y="180" text-anchor="middle" font-size="9.5">rasm yoki PDF</text>
+              </g>
+
+              <!-- Tur aniqlash -->
+              <g class="wf-hit" data-node="tur" tabindex="0" role="button" aria-label="Fayl turi tuguni haqida">
+                <rect class="wf-box" x="200" y="92" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(240 110)">
+                  <path class="wf-ic wf-ic-plain" d="M10 2l8 4v8l-8 4-8-4V6z"/>
+                  <path class="wf-ic wf-ic-plain" d="M10 10l8-4M10 10v8M10 10L2 6"/>
+                </g>
+                <text class="wf-title" x="250" y="166" text-anchor="middle" font-size="12">Tur aniqlanadi</text>
+                <text class="wf-sub" x="250" y="180" text-anchor="middle" font-size="9.5">bayt imzosidan</text>
+                <circle class="wf-dot" cx="304" cy="112" r="2.8"/>
+                <circle class="wf-dot" cx="304" cy="130" r="2.8"/>
+              </g>
+
+              <!-- Rasm yo'li -->
+              <g class="wf-hit" data-node="rasm" tabindex="0" role="button" aria-label="Rasm yo'li tuguni haqida">
+                <rect class="wf-box" x="360" y="42" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(400 61)">
+                  <rect class="wf-ic wf-ic-plain" x="1" y="2" width="18" height="14" rx="2"/>
+                  <circle class="wf-ic wf-ic-plain" cx="7" cy="8" r="1.8"/>
+                  <path class="wf-ic wf-ic-plain" d="M1 13l5-3 4 2 3-2 6 4"/>
+                </g>
+                <text class="wf-title" x="410" y="116" text-anchor="middle" font-size="12">Rasm</text>
+                <text class="wf-sub" x="410" y="130" text-anchor="middle" font-size="9.5">modelga ko'rsatiladi</text>
+              </g>
+
+              <!-- PDF yo'li -->
+              <g class="wf-hit" data-node="pdf" tabindex="0" role="button" aria-label="PDF yo'li tuguni haqida">
+                <rect class="wf-box" x="360" y="222" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(401 240)">
+                  <path class="wf-ic wf-ic-plain" d="M4 1h7l4 4v13H4z"/>
+                  <path class="wf-ic wf-ic-plain" d="M11 1v4h4M7 10h5M7 13h3"/>
+                </g>
+                <text class="wf-title" x="410" y="296" text-anchor="middle" font-size="12">PDF</text>
+                <text class="wf-sub" x="410" y="310" text-anchor="middle" font-size="9.5">sahifa-sahifa</text>
+              </g>
+
+              <!-- Model -->
+              <g class="wf-hit" data-node="oqish" tabindex="0" role="button" aria-label="Maydonlarni o'qish tuguni haqida">
+                <rect class="wf-stack" x="530" y="82" width="100" height="56" rx="12"/>
+                <rect class="wf-stack" x="525" y="87" width="100" height="56" rx="12"/>
+                <rect class="wf-box wf-box-ai" x="520" y="92" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(560 110)">
+                  <path class="wf-ic" d="M3 3h14M3 9h14M3 15h9"/>
+                </g>
+                <text class="wf-title" x="570" y="166" text-anchor="middle" font-size="12">Maydonlar o'qiladi</text>
+                <text class="wf-sub" x="570" y="180" text-anchor="middle" font-size="9.5">model &#183; qat'iy shakl</text>
+                <text class="wf-loop-t wf-batch" x="570" y="194" text-anchor="middle" font-size="9">har sahifa &#183; 2 tadan parallel</text>
+                <g transform="translate(616 96)">
+                  <circle class="wf-bot-bg" cx="0" cy="0" r="11"/>
+                  <rect class="wf-bot" x="-5.5" y="-4" width="11" height="8" rx="2.5"/>
+                  <path class="wf-bot" d="M0 -4v-2.6"/>
+                  <circle class="wf-bot" cx="0" cy="-7.6" r="1"/>
+                  <path class="wf-bot" d="M-2.4 -1h.01M2.4 -1h.01"/>
+                  <path class="wf-bot" d="M-1.8 1.8h3.6"/>
+                </g>
+              </g>
+
+              <!-- Birlashtirish -->
+              <g class="wf-hit" data-node="birlashtirish" tabindex="0" role="button" aria-label="Birlashtirish tuguni haqida">
+                <rect class="wf-box" x="672" y="92" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(712 110)">
+                  <path class="wf-ic wf-ic-plain" d="M2 4h6l4 6 4-6h2M2 16h6l4-6"/>
+                </g>
+                <text class="wf-title" x="722" y="166" text-anchor="middle" font-size="12">Birlashtirish</text>
+                <text class="wf-sub" x="722" y="180" text-anchor="middle" font-size="9.5">ko'p fayl &rarr; bitta</text>
+              </g>
+
+              <!-- OUT -->
+              <g class="wf-hit" data-node="natija" tabindex="0" role="button" aria-label="Natija tuguni haqida">
+                <rect class="wf-box wf-box-out" x="824" y="92" width="56" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(843 112)">
+                  <path class="wf-ic wf-ic-out" d="M2 9.5l4.5 4.5L16 4"/>
+                </g>
+                <text class="wf-title" x="852" y="166" text-anchor="middle" font-size="12">Tayyor</text>
+              </g>
+
+            </svg>
+          </div>
+
+          <div class="node-info idle" id="node-info">
+            <p>Tugun ustiga bosing &mdash; nima qilishi haqida qisqa ma'lumot chiqadi.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ NAMUNALAR ============ -->
+      <section class="band band-alt">
+        <div class="wrap">
+          <h2 class="sec-h">Namunalar</h2>
+
+          <div class="carousel" id="shots">
+            <div class="car-track" id="car-track">
+              <figure class="car-item">
+                <img src="images/tex-passport/1.png"
+                     alt="Yangi uskuna qo'shish: hujjat yoki rasm yuklash oynasi"
+                     loading="lazy">
+              </figure>
+
+              <figure class="car-item">
+                <img src="images/tex-passport/2.png"
+                     alt="Bo'sh maydonlar: ishlab chiqaruvchi, model, yil, seriya raqami"
+                     loading="lazy">
+              </figure>
+
+              <figure class="car-item">
+                <img src="images/tex-passport/3.png"
+                     alt="Texnik pasport bosqichi: pasport raqami, quvvat, bosim — hammasi bo'sh"
+                     loading="lazy">
+              </figure>
+
+              <figure class="car-item">
+                <img src="images/tex-passport/4.png"
+                     alt="PDF yuklandi, uskuna nomi avtomatik to'ldirildi"
+                     loading="lazy">
+              </figure>
+
+              <figure class="car-item">
+                <img src="images/tex-passport/5.png"
+                     alt="Maydonlar to'ldirildi: Chevrolet, Malibu 2, 2026, SN-2024-0001"
+                     loading="lazy">
+              </figure>
+
+              <figure class="car-item">
+                <img src="images/tex-passport/6.png"
+                     alt="Texnik pasport ham to'ldirildi: quvvat 15 kVt, kuchlanish 380 V, bosim 4 bar"
+                     loading="lazy">
+              </figure>
+            </div>
+
+            <div class="car-nav">
+              <button class="car-btn" id="car-prev" type="button" aria-label="Oldingi rasm">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+              </button>
+              <div class="car-dots" id="car-dots" role="tablist" aria-label="Rasmlar"></div>
+              <button class="car-btn" id="car-next" type="button" aria-label="Keyingi rasm">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-in">
+        <span>TOIR &middot; Texnik pasport OCR</span>
+        <a href="index.html">&larr; TOIR bo'limlari</a>
+      </div>
+    </footer>
+  </div>
+
+</div>
+
+<script>
+// Canvas tugunlari haqida qisqa ma'lumot.
+(function () {
+  var DATA = {
+    'fayl': {
+      t: 'Fayl yuklanadi',
+      bot: false,
+      p: 'Pasport rasmi (JPEG, PNG, WebP, BMP, TIFF) yoki PDF fayli qabul qilinadi. Bir nechta fayl birdan yuborilishi mumkin — pasport bitta suratga sig’masa, qolgan qismini ikkinchi rasm qilib qo’shish kifoya.',
+      u: ['FastAPI', 'multipart', 'background job']
+    },
+    'tur': {
+      t: 'Fayl turi aniqlanadi',
+      bot: false,
+      p: 'Tur faylning o’zidan aniqlanadi — boshlang’ich baytlaridagi imzodan. Foydalanuvchi turni qo’lda ko’rsatishi shart emas, noto’g’ri kengaytma ham chalg’itmaydi. Turiga qarab ikkita yo’ldan biri tanlanadi.',
+      u: ['bayt imzosi', 'content-type']
+    },
+    'rasm': {
+      t: 'Rasm modelga ko’rsatiladi',
+      bot: false,
+      p: 'Rasm o’zgartirilmasdan modelga uzatiladi — u suratdagi matnni ham, jadval tuzilishini ham ko’radi. Alohida OCR bosqichi yo’q: matnni ajratib, keyin uni tushunishga urinish ikki marta xato qilish imkonini berardi.',
+      u: ['vision model', 'base64']
+    },
+    'pdf': {
+      t: 'PDF matni ajratiladi',
+      bot: false,
+      p: 'PDF da matn allaqachon bor, shuning uchun uni rasmga aylantirish ortiqcha: matn to’g’ridan-to’g’ri o’qiladi. Bu tezroq va aniqroq. Har sahifa alohida ajratiladi va keyingi bosqichga mustaqil ravishda tushadi. Sahifa juda uzun bo’lsa kesiladi — model kontekstiga sig’dirish uchun.',
+      u: ['pypdf', 'sahifa bo’yicha']
+    },
+    'oqish': {
+      t: 'Maydonlar o’qiladi',
+      bot: true,
+      p: 'Har sahifa uchun modelga alohida chaqiruv ketadi, bir vaqtda ikkitadan — hammasi birdan yuborilsa model navbatga tushib qolardi. Model qat’iy shaklda javob beradi: model nomi, ishlab chiqaruvchi, seriya va inventar raqamlari, ishlab chiqarilgan yil, texnik ko’rsatkichlar va ish unumdorligi. Eng muhim qoida shu bosqichda: pasportda ko’rinmagan maydon o’ylab topilmaydi, u null bo’lib qaytadi.',
+      u: ['model', 'sahifa-sahifa', 'parallel (2)', 'null-safe']
+    },
+    'birlashtirish': {
+      t: 'Natijalar birlashtiriladi',
+      bot: false,
+      p: 'Har sahifa va har fayldan kelgan natijalar bitta pasportga yig’iladi: birinchi faylda topilmagan maydon ikkinchisidan to’ldiriladi. Har faylning o’z natijasi ham alohida saqlanadi — qaysi ma’lumot qayerdan kelgani ko’rinib tursin.',
+      u: ['merge', 'sahifa izlari']
+    },
+    'natija': {
+      t: 'Tayyor maydonlar',
+      bot: false,
+      p: 'Natija JSON ko’rinishida qaytadi va uskuna kartochkasiga to’g’ridan-to’g’ri o’tadi. To’ldirilmagan maydonlar ochiq ko’rinadi — xodim ularni ko’rib, kerak bo’lsa qo’lda to’ldiradi.',
+      u: ['JSON javob', 'ogohlantirishlar']
+    }
+  };
+
+  var box = document.getElementById('node-info');
+  if (!box) return;
+  var hits = document.querySelectorAll('.wf-hit');
+
+  function show(key, el) {
+    var d = DATA[key];
+    if (!d) return;
+    hits.forEach(function (h) { h.classList.remove('sel'); });
+    el.classList.add('sel');
+    var tag = d.bot
+      ? '<span class="ni-bot">Model bajaradi</span>'
+      : '<span class="ni-plain">Kod bajaradi</span>';
+    var used = d.u.map(function (x) { return '<span>' + x + '</span>'; }).join('');
+    box.className = 'node-info';
+    box.innerHTML =
+      '<div class="ni-head"><h3>' + d.t + '</h3>' + tag + '</div>' +
+      '<p class="ni-text">' + d.p + '</p>' +
+      '<div class="ni-used">' + used + '</div>';
+  }
+
+  hits.forEach(function (el) {
+    el.addEventListener('click', function () {
+      show(el.getAttribute('data-node'), el);
+    });
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        show(el.getAttribute('data-node'), el);
+      }
+    });
+  });
+})();
+</script>
+
+<script>
+// Rasm karuseli.
+(function () {
+  var track = document.getElementById('car-track');
+  if (!track) return;
+
+  var items = Array.prototype.slice.call(track.querySelectorAll('.car-item'));
+  var dotsBox = document.getElementById('car-dots');
+  var prev = document.getElementById('car-prev');
+  var next = document.getElementById('car-next');
+  var at = 0;
+
+  if (!items.length) {
+    var box = document.getElementById('shots');
+    if (box) box.hidden = true;
+    return;
+  }
+
+  var dots = items.map(function (_, i) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'car-dot';
+    b.setAttribute('aria-label', (i + 1) + '-rasm');
+    b.addEventListener('click', function () { go(i); });
+    dotsBox.appendChild(b);
+    return b;
+  });
+
+  function render() {
+    items.forEach(function (el, i) {
+      el.classList.remove('is-center', 'is-left', 'is-right', 'is-far');
+      if (i === at) el.classList.add('is-center');
+      else if (i === at - 1) el.classList.add('is-left');
+      else if (i === at + 1) el.classList.add('is-right');
+      else el.classList.add('is-far');
+    });
+    dots.forEach(function (b, i) { b.classList.toggle('on', i === at); });
+    prev.disabled = at === 0;
+    next.disabled = at === items.length - 1;
+  }
+
+  function go(i) {
+    at = Math.max(0, Math.min(items.length - 1, i));
+    render();
+  }
+
+  prev.addEventListener('click', function () { go(at - 1); });
+  next.addEventListener('click', function () { go(at + 1); });
+
+  items.forEach(function (el, i) {
+    el.addEventListener('click', function () { if (i !== at) go(i); });
+  });
+
+  track.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(at - 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(at + 1); }
+  });
+
+  var lastSwipe = 0;
+  track.addEventListener('wheel', function (e) {
+    var dx = e.deltaX;
+    if (Math.abs(dx) < Math.abs(e.deltaY) || Math.abs(dx) < 12) return;
+    e.preventDefault();
+    var now = Date.now();
+    if (now - lastSwipe < 380) return;
+    lastSwipe = now;
+    go(dx > 0 ? at + 1 : at - 1);
+  }, { passive: false });
+
+  var x0 = null;
+  track.addEventListener('touchstart', function (e) {
+    x0 = e.touches[0].clientX;
+  }, { passive: true });
+  track.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 40) go(dx < 0 ? at + 1 : at - 1);
+    x0 = null;
+  });
+
+  if (items.length < 2) {
+    document.querySelector('.car-nav').style.display = 'none';
+  }
+
+  render();
+})();
+</script>
+
+</body>
+</html>

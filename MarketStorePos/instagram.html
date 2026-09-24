@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Instagram yordamchisi — NoutSpace</title>
+<meta name="description" content="Instagram DM ga do'kon nomidan javob beruvchi AI yordamchi: webhook, function calling va haqiqiy ombor ma'lumoti.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Asosiy qismga o'tish</a>
+
+<div class="shell">
+
+  <aside class="side">
+    <a class="side-brand" href="../index.html">
+      BEGZOD <br>TURDIBEKOV<span class="dot">.</span>
+      <small>AI Engineer</small>
+    </a>
+
+    <nav class="side-nav" aria-label="Asosiy">
+      <a href="../index.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+          <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+          <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+          <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+        </svg>
+        Loyihalar
+      </a>
+      <a href="../about.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="8" r="3.6"/>
+          <path d="M4.5 20a7.5 7.5 0 0115 0"/>
+        </svg>
+        Men haqimda
+      </a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <main id="main">
+
+      <!-- ============ HERO ============ -->
+      <section class="wrap hero">
+        <a class="proj-back" href="index.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 5l-7 7 7 7"/>
+          </svg>
+          NoutSpace &mdash; Savdo va Ombor Tizimi
+          <span class="step-n">Bo'lim 01</span>
+        </a>
+        <h1>Instagram yordamchisi</h1>
+        <p class="hero-lead">
+          Do'kon sahifasiga yozgan mijozga tizim o'zi javob beradi. Har bir
+          narx va qoldiq ombordan olinadi &mdash; model o'zidan raqam
+          o'ylab topmaydi, topilmasa buni ochiq aytadi.
+        </p>
+      </section>
+
+      <!-- ============ MAQSAD ============ -->
+      <section class="band band-alt">
+        <div class="wrap">
+          <h2 class="sec-h">Maqsad</h2>
+
+          <div class="purpose">
+            <p>
+              Do'konning Instagram sahifasiga kuniga o'nlab bir xil savol
+              keladi: &laquo;bormi?&raquo;, &laquo;narxi qancha?&raquo;,
+              &laquo;xotirasi qancha?&raquo;. Sotuvchi kassada turib javob
+              yozadi, kechqurun esa savollar javobsiz qoladi &mdash; mijoz
+              esa kutmaydi.
+            </p>
+            <p>
+              <b>Yordamchi shu ishni o'z zimmasiga oladi:</b> mijoz nima
+              so'rasa, tizim ombordan qidiradi va topilganini o'z so'zi bilan
+              yozadi. Eng muhimi &mdash; javob doim haqiqiy qoldiqqa
+              bog'langan: mahsulot bazada yo'q bo'lsa, o'rniga boshqasi
+              taklif qilinmaydi, yo'qligi aytiladi. Narxni noto'g'ri aytgan
+              bot umuman botsiz holatdan qimmatroqqa tushadi.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ OQIM ============ -->
+      <section class="band">
+        <div class="wrap">
+          <h2 class="sec-h">Ishlash WorkFlow</h2>
+
+          <div class="canvas">
+            <svg viewBox="0 -18 1190 366" role="img"
+                 aria-label="Instagram yordamchisi oqimi: mijoz xabaridan javob qaytishigacha">
+
+              <!-- ===== asosiy yo&#8217;l ===== -->
+              <path class="wf-link" d="M 148 120 C 174 120 176 120 200 120"/>
+              <path class="wf-link" d="M 300 112 C 330 112 330 70 360 70"/>
+              <path class="wf-link" d="M 300 130 C 330 130 330 268 360 268"/>
+              <path class="wf-link" d="M 460 70 C 486 70 488 70 512 70"/>
+              <path class="wf-link" d="M 612 70 C 638 70 640 70 664 70"/>
+              <path class="wf-link" d="M 764 70 C 790 70 792 70 816 70"/>
+              <path class="wf-link" d="M 916 70 C 948 70 948 160 976 160"/>
+              <path class="wf-link" d="M 1076 160 C 1098 160 1102 160 1120 160"/>
+
+              <!-- xotira javob yozishga ulanadi -->
+              <path class="wf-link" d="M 460 268 C 700 268 750 160 976 160"/>
+
+              <!-- ===== LOOP: model yana qidirsa ===== -->
+              <path class="wf-loop" d="M 714 36 C 714 2 460 2 410 2 C 386 2 386 20 386 36"/>
+              <text class="wf-loop-t" x="550" y="-6" text-anchor="middle" font-size="9.6">
+                model yana qidirsa &#8212; qayta (5 martagacha)
+              </text>
+
+              <!-- IN: mijoz xabari -->
+              <g class="wf-hit" data-node="xabar" tabindex="0" role="button" aria-label="Mijoz xabari tuguni haqida">
+                <rect class="wf-box wf-box-in" x="48" y="92" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(89 110)">
+                  <path class="wf-ic wf-ic-in" d="M1 8a7 7 0 017-7h4a7 7 0 010 14H6l-5 3z"/>
+                </g>
+                <text class="wf-title" x="98" y="166" text-anchor="middle" font-size="12">Mijoz DM</text>
+                <text class="wf-sub" x="98" y="180" text-anchor="middle" font-size="9.5">Instagram</text>
+              </g>
+
+              <!-- Webhook -->
+              <g class="wf-hit" data-node="webhook" tabindex="0" role="button" aria-label="Webhook tuguni haqida">
+                <rect class="wf-box" x="200" y="92" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(240 110)">
+                  <path class="wf-ic wf-ic-plain" d="M10 1.5l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9v-6z"/>
+                  <path class="wf-ic wf-ic-plain" d="M6.5 10l2.5 2.5 4.5-4.5"/>
+                </g>
+                <text class="wf-title" x="250" y="166" text-anchor="middle" font-size="12">Webhook</text>
+                <text class="wf-sub" x="250" y="180" text-anchor="middle" font-size="9.5">HMAC imzo</text>
+                <circle class="wf-dot" cx="304" cy="112" r="2.8"/>
+                <circle class="wf-dot" cx="304" cy="130" r="2.8"/>
+              </g>
+
+              <!-- Navbat -->
+              <g class="wf-hit" data-node="navbat" tabindex="0" role="button" aria-label="Navbat tuguni haqida">
+                <rect class="wf-box" x="360" y="42" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(401 60)">
+                  <path class="wf-ic wf-ic-plain" d="M2 4h16M2 9h16M2 14h10"/>
+                </g>
+                <text class="wf-title" x="410" y="116" text-anchor="middle" font-size="12">Fon navbati</text>
+                <text class="wf-sub" x="410" y="130" text-anchor="middle" font-size="9.5">Celery &#183; Redis</text>
+              </g>
+
+              <!-- Model -->
+              <g class="wf-hit" data-node="model" tabindex="0" role="button" aria-label="Model tuguni haqida">
+                <rect class="wf-box wf-box-ai" x="512" y="42" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(552 60)">
+                  <path class="wf-ic" d="M10 1.5a6 6 0 016 6v4a6 6 0 01-12 0v-4a6 6 0 016-6z"/>
+                  <path class="wf-ic" d="M7 8h6"/>
+                </g>
+                <text class="wf-title" x="562" y="116" text-anchor="middle" font-size="12">Model</text>
+                <text class="wf-sub" x="562" y="130" text-anchor="middle" font-size="9.5">Gemini</text>
+                <g transform="translate(608 46)">
+                  <circle class="wf-bot-bg" cx="0" cy="0" r="11"/>
+                  <rect class="wf-bot" x="-5.5" y="-4" width="11" height="8" rx="2.5"/>
+                  <path class="wf-bot" d="M0 -4v-2.6"/>
+                  <circle class="wf-bot" cx="0" cy="-7.6" r="1"/>
+                  <path class="wf-bot" d="M-2.4 -1h.01M2.4 -1h.01"/>
+                  <path class="wf-bot" d="M-1.8 1.8h3.6"/>
+                </g>
+              </g>
+
+              <!-- Vosita -->
+              <g class="wf-hit" data-node="vosita" tabindex="0" role="button" aria-label="Qidiruv vositasi tuguni haqida">
+                <rect class="wf-box" x="664" y="42" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(705 60)">
+                  <circle class="wf-ic wf-ic-plain" cx="8" cy="8" r="6"/>
+                  <path class="wf-ic wf-ic-plain" d="M12.5 12.5L18 18"/>
+                </g>
+                <text class="wf-title" x="714" y="116" text-anchor="middle" font-size="12">Ombor qidiruvi</text>
+                <text class="wf-sub" x="714" y="130" text-anchor="middle" font-size="9.5">function calling</text>
+              </g>
+
+              <!-- Baza -->
+              <g class="wf-hit" data-node="baza" tabindex="0" role="button" aria-label="PostgreSQL tuguni haqida">
+                <rect class="wf-box" x="816" y="42" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(856 61)">
+                  <ellipse class="wf-ic wf-ic-plain" cx="10" cy="4" rx="7.5" ry="2.8"/>
+                  <path class="wf-ic wf-ic-plain" d="M2.5 4v9c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8V4"/>
+                </g>
+                <text class="wf-title" x="866" y="116" text-anchor="middle" font-size="12">PostgreSQL</text>
+                <text class="wf-sub" x="866" y="130" text-anchor="middle" font-size="9.5">faqat o'qish</text>
+              </g>
+
+              <!-- Xotira -->
+              <g class="wf-hit" data-node="xotira" tabindex="0" role="button" aria-label="Suhbat xotirasi tuguni haqida">
+                <rect class="wf-box" x="360" y="240" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(401 258)">
+                  <path class="wf-ic wf-ic-plain" d="M10 2.5a5 5 0 015 5v5a5 5 0 01-10 0v-5a5 5 0 015-5z"/>
+                  <path class="wf-ic wf-ic-plain" d="M10 8v3"/>
+                </g>
+                <text class="wf-title" x="410" y="314" text-anchor="middle" font-size="12">Suhbat xotirasi</text>
+                <text class="wf-sub" x="410" y="328" text-anchor="middle" font-size="9.5">Redis &#183; 1 hafta</text>
+              </g>
+
+              <!-- Javob yozish -->
+              <g class="wf-hit" data-node="javob-yozish" tabindex="0" role="button" aria-label="Javob yozish tuguni haqida">
+                <rect class="wf-box wf-box-ai" x="976" y="132" width="100" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(1016 150)">
+                  <path class="wf-ic" d="M2 16l2-5 9-9 3 3-9 9z"/>
+                  <path class="wf-ic" d="M2 18h16"/>
+                </g>
+                <text class="wf-title" x="1026" y="206" text-anchor="middle" font-size="12">Javob yozish</text>
+                <text class="wf-sub" x="1026" y="220" text-anchor="middle" font-size="9.5">900 belgigacha</text>
+                <g transform="translate(1072 136)">
+                  <circle class="wf-bot-bg" cx="0" cy="0" r="11"/>
+                  <rect class="wf-bot" x="-5.5" y="-4" width="11" height="8" rx="2.5"/>
+                  <path class="wf-bot" d="M0 -4v-2.6"/>
+                  <circle class="wf-bot" cx="0" cy="-7.6" r="1"/>
+                  <path class="wf-bot" d="M-2.4 -1h.01M2.4 -1h.01"/>
+                  <path class="wf-bot" d="M-1.8 1.8h3.6"/>
+                </g>
+              </g>
+
+              <!-- OUT -->
+              <g class="wf-hit" data-node="jonatish" tabindex="0" role="button" aria-label="Javob yuborish tuguni haqida">
+                <rect class="wf-box wf-box-out" x="1120" y="132" width="56" height="56" rx="12" stroke-width="1.8"/>
+                <g transform="translate(1139 152)">
+                  <path class="wf-ic wf-ic-out" d="M2 9.5l4.5 4.5L16 4"/>
+                </g>
+                <text class="wf-title" x="1148" y="206" text-anchor="middle" font-size="12">Yuborildi</text>
+              </g>
+
+            </svg>
+          </div>
+          <div class="node-info idle" id="node-info">
+            <p>Tugun ustiga bosing &#8212; nima qilishi haqida qisqa ma&#8217;lumot chiqadi.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============ QOIDALAR ============ -->
+      <section class="band band-alt">
+        <div class="wrap">
+          <h2 class="sec-h">Javob qoidalari</h2>
+          <p class="sec-lead">
+            Modelga do'kon nomidan gapirish ishonib topshirilgan, shuning uchun
+            unga nima mumkin emasligi aniq aytilgan.
+          </p>
+
+          <div class="two">
+            <div class="panel-c">
+              <h3 class="panel-h">Nimaga ruxsat yo'q</h3>
+              <div class="mode">
+                <b>Narx va qoldiqni o'ylab topish</b>
+                <p>Har qanday raqam qidiruv natijasidan olinadi. Natija bo'sh
+                   bo'lsa &mdash; &laquo;hozircha bizda yo'q&raquo;, o'rniga
+                   boshqa mahsulot tiqishtirilmaydi.</p>
+              </div>
+              <div class="mode">
+                <b>Bazani o'zgartirish</b>
+                <p>Vosita faqat o'qiydi. Mijozning xabari &mdash; ishonchsiz
+                   matn: uni yozib, do'kon qoldig'ini o'zgartirib bo'lmaydi.</p>
+              </div>
+              <div class="mode">
+                <b>Mavzudan chetga chiqish</b>
+                <p>Ob-havo, siyosat yoki kod yozish so'ralsa, muloyim rad etib,
+                   mahsulot bo'yicha yordam taklif qiladi.</p>
+              </div>
+              <div class="mode">
+                <b>Bilmagan narsasiga javob berish</b>
+                <p>Yetkazib berish, to'lov, kafolat, ish vaqti &mdash; bular
+                   bazada yo'q. Bunday savol operatorga yo'naltiriladi.</p>
+              </div>
+            </div>
+
+            <div class="panel-c">
+              <h3 class="panel-h">Nima qiladi</h3>
+              <ul class="checks">
+                <li>Mijoz qaysi tilda yozgan bo'lsa, o'sha tilda javob beradi
+                    &mdash; o'zbek, rus, ingliz.</li>
+                <li>Narx, qoldiq va xarakteristikani (CPU, RAM, SSD) alohida
+                    so'ralishini kutmay darhol aytadi.</li>
+                <li>&laquo;Ish uchun&raquo;, &laquo;o'yin uchun&raquo; kabi
+                    noaniq so'rovda birdan tavsiya qilmay, budjet va maqsadni
+                    birma-bir aniqlashtiradi.</li>
+                <li>Bitta modelni tanlab, nega aynan shuni tavsiya qilganini
+                    qisqa izohlaydi.</li>
+                <li>Dollar yoki yevroda so'ralsa, do'konning o'z kursi bilan
+                    hisoblaydi &mdash; markaziy bank kursi bilan emas.</li>
+                <li>Javob 1&ndash;3 gap, Markdownsiz: Instagram uni
+                    ko'rsatmaydi, <code>**qalin**</code> yulduzcha bo'lib
+                    chiqadi.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ NAMUNALAR ============ -->
+      <section class="band">
+        <div class="wrap">
+          <h2 class="sec-h">Namunalar</h2>
+
+          <div class="carousel" id="shots">
+            <div class="car-track" id="car-track">
+
+              <figure class="car-item">
+                <img src="images/Screenshot 2026-09-24 105911.png" alt="Instagram DM: mijoz kompyuter so&#8217;raydi, yordamchi maqsad va budjetni aniqlashtirib model tavsiya qiladi" loading="lazy">
+              </figure>
+
+              <figure class="car-item">
+                <img src="images/Screenshot 2026-09-24 110017.png" alt="Yordamchi budjetga mos bir nechta noutbukni narx va xarakteristikasi bilan ro&#8217;yxat qilib beradi" loading="lazy">
+              </figure>
+
+              <figure class="car-item">
+                <img src="images/Screenshot 2026-09-24 110134.png" alt="Yordamchi tanlagan modelini nega tavsiya qilganini izohlaydi" loading="lazy">
+              </figure>
+
+            </div>
+
+            <div class="car-nav">
+              <button class="car-btn" id="car-prev" type="button" aria-label="Oldingi rasm">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+              </button>
+              <div class="car-dots" id="car-dots" role="tablist" aria-label="Rasmlar"></div>
+              <button class="car-btn" id="car-next" type="button" aria-label="Keyingi rasm">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-in">
+        <span>NoutSpace &middot; Instagram yordamchisi</span>
+        <a href="index.html">&larr; NoutSpace bo'limlari</a>
+      </div>
+    </footer>
+  </div>
+
+</div>
+
+
+<script>
+// Canvas tugunlari haqida qisqa ma'lumot. Har tugun bosilganda
+// canvas ostidagi panel yangilanadi - sahifadan chiqmasdan.
+(function () {
+  var DATA = {
+    'xabar': {
+      t: 'Mijoz xabar yozadi',
+      bot: false,
+      p: 'Do\'konning Instagram sahifasiga kelgan har bir xabar haqida Meta darhol xabar beradi. Do\'kon o\'zi yozgan javob ham qaytib keladi — u belgilangan va e\'tiborsiz qoldiriladi, aks holda bot o\'z javobiga javob yozib aylanib qolardi.',
+      u: ['Instagram', 'Meta webhook']
+    },
+    'webhook': {
+      t: 'Xabar tekshiriladi',
+      bot: false,
+      p: 'Har bir so\'rov imzo bilan keladi: u xabar baytlari va maxfiy kalitdan hisoblanadi. Imzo mos kelmasa so\'rov rad etiladi — aks holda URL ni bilgan har kim do\'kon nomidan javob yozdira olardi. Imzo kelgan baytlarning aynan o\'ziga tegishli, shuning uchun tekshiruv JSON o\'qilishidan oldin bo\'ladi.',
+      u: ['FastAPI', 'HMAC SHA-256']
+    },
+    'navbat': {
+      t: 'Fon navbatiga qo\'yiladi',
+      bot: false,
+      p: 'Javob so\'rov ichida kutilmaydi: model bir necha soniya o\'ylaydi, sekin javob bergan webhook esa Meta uchun nosozlik belgisi — u xabarni qayta-qayta yuboradi, oxirida ulanishni o\'chiradi. Shuning uchun webhook darhol "qabul qilindi" deydi, ish esa alohida jarayonda bajariladi.',
+      u: ['Celery', 'Redis', 'qayta urinish']
+    },
+    'xotira': {
+      t: 'Suhbat esga olinadi',
+      bot: false,
+      p: 'Mijozning oldingi xabarlari va javoblar yuklanadi — shuning uchun "narxi qancha?" deb yozilganda qaysi mahsulot haqida ketayotgani ma\'lum. Oxirgi 10 ta gap saqlanadi va bir hafta yozilmasa o\'chadi. Xotira yo\'qolsa ham javob beriladi: kontekstsiz javob — javobsizlikdan yaxshiroq.',
+      u: ['Redis', '10 ta gap', 'TTL 1 hafta']
+    },
+    'model': {
+      t: 'Model o\'ylaydi',
+      bot: true,
+      p: 'Modelga do\'kon yordamchisi sifatida qanday gapirish kerakligi va nima qilish mumkin emasligi aytilgan. U mahsulot haqidagi savolga o\'zidan javob bera olmaydi — avval qidiruv vositasini chaqirishi shart. Bir necha vositani birdan ham chaqira oladi.',
+      u: ['Gemini', 'system prompt', 'function calling']
+    },
+    'vosita': {
+      t: 'Ombordan qidiriladi',
+      bot: false,
+      p: 'Model SQL yozmaydi — u faqat tayyor filtrlarni to\'ldiradi: nom, kategoriya, narx oralig\'i, qoldig\'i borlari. So\'rovni kod quradi, shuning uchun mijoz xabaridagi hech qanday matn bazaga yetib bormaydi. Mahsulotning texnik maydonlari (CPU, RAM, ekran) ham shu yerda o\'qiladi.',
+      u: ['search_products', 'get_product_specs', 'bog\'langan parametr']
+    },
+    'baza': {
+      t: 'Bazada bajariladi',
+      bot: false,
+      p: 'Qidiruv faqat shu do\'kon yozuvlari ichida va faqat o\'qish huquqi bilan ishlaydi. Mijozga ko\'rsatiladigan maydonlar oldindan belgilangan: nom, narx, qoldiq, birlik, kategoriya. Tannarx, ta\'minotchi va ichki id\'lar bu yerdan chiqmaydi — id ni ko\'rgan model uni ertami-kechmi mijozga yozib yuborardi.',
+      u: ['PostgreSQL', 'JSONB', 'pg_trgm']
+    },
+    'javob-yozish': {
+      t: 'Javob yoziladi',
+      bot: true,
+      p: 'Xom jadval emas — mijoz tilida, iliq va qisqa gap. Uzunlik cheklangan: Instagram DM 1000 belgidan uzun xabarni qabul qilmaydi, ya\'ni chegaradan oshgan javob umuman yetib bormasdi. Model hech narsa yozmasa, jim qolinadi — bo\'sh javob ham javob.',
+      u: ['ko\'p tilli', 'Markdownsiz', '900 belgi']
+    },
+    'jonatish': {
+      t: 'Javob yuboriladi',
+      bot: false,
+      p: 'Javob do\'kon akkaunti nomidan yuboriladi. Meta bunga mijozning o\'z xabaridan keyingi 24 soat ichida ruxsat beradi — bu oqim aynan shu holatda ishlaydi. Tarmoq uzilsa qayta urinib ko\'riladi; kalit sozlanmagan bo\'lsa urinilmaydi, chunki qayta urinish buni tuzatmaydi.',
+      u: ['Instagram Graph API', '24 soat oynasi']
+    }
+  };
+
+  var box = document.getElementById('node-info');
+  if (!box) return;
+  var hits = document.querySelectorAll('.wf-hit');
+
+  function show(key, el) {
+    var d = DATA[key];
+    if (!d) return;
+    hits.forEach(function (h) { h.classList.remove('sel'); });
+    el.classList.add('sel');
+
+    var tag = d.bot
+      ? '<span class="ni-bot">Model bajaradi</span>'
+      : '<span class="ni-plain">Kod bajaradi</span>';
+    var used = d.u.map(function (x) { return '<span>' + x + '</span>'; }).join('');
+
+    box.className = 'node-info';
+    box.innerHTML =
+      '<div class="ni-head"><h3>' + d.t + '</h3>' + tag + '</div>' +
+      '<p class="ni-text">' + d.p + '</p>' +
+      '<div class="ni-used">' + used + '</div>';
+  }
+
+  hits.forEach(function (el) {
+    el.addEventListener('click', function () {
+      show(el.getAttribute('data-node'), el);
+    });
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        show(el.getAttribute('data-node'), el);
+      }
+    });
+  });
+})();
+</script>
+
+
+<script>
+// Rasm karuseli: markazdagi katta, chetdagilar kichik.
+// O'ng/chapga surilganda navbatdagisi markazni egallaydi.
+(function () {
+  var track = document.getElementById('car-track');
+  if (!track) return;
+
+  var items = Array.prototype.slice.call(track.querySelectorAll('.car-item'));
+  var dotsBox = document.getElementById('car-dots');
+  var prev = document.getElementById('car-prev');
+  var next = document.getElementById('car-next');
+  var at = 0;
+
+  // Nuqtalar
+  var dots = items.map(function (_, i) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'car-dot';
+    b.setAttribute('aria-label', (i + 1) + '-rasm');
+    b.addEventListener('click', function () { go(i); });
+    dotsBox.appendChild(b);
+    return b;
+  });
+
+  function render() {
+    items.forEach(function (el, i) {
+      el.classList.remove('is-center', 'is-left', 'is-right', 'is-far');
+      if (i === at) el.classList.add('is-center');
+      else if (i === at - 1) el.classList.add('is-left');
+      else if (i === at + 1) el.classList.add('is-right');
+      else el.classList.add('is-far');
+    });
+    dots.forEach(function (b, i) { b.classList.toggle('on', i === at); });
+    prev.disabled = at === 0;
+    next.disabled = at === items.length - 1;
+  }
+
+  function go(i) {
+    at = Math.max(0, Math.min(items.length - 1, i));
+    render();
+  }
+
+  prev.addEventListener('click', function () { go(at - 1); });
+  next.addEventListener('click', function () { go(at + 1); });
+
+  // Rasmni bosish ham uni markazga olib keladi.
+  items.forEach(function (el, i) {
+    el.addEventListener('click', function () { if (i !== at) go(i); });
+  });
+
+  // Klaviatura
+  track.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(at - 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(at + 1); }
+  });
+
+  // Touchpad'da ikki barmoq bilan surish (yoki sichqoncha g'ildiragi
+  // yon tomonga). Brauzer buni gorizontal scroll deb yuboradi.
+  var lastSwipe = 0;
+  track.addEventListener('wheel', function (e) {
+    var dx = e.deltaX;
+    if (Math.abs(dx) < Math.abs(e.deltaY) || Math.abs(dx) < 12) return;
+    e.preventDefault();
+    var now = Date.now();
+    if (now - lastSwipe < 380) return;
+    lastSwipe = now;
+    go(dx > 0 ? at + 1 : at - 1);
+  }, { passive: false });
+
+  // Telefonda surish
+  var x0 = null;
+  track.addEventListener('touchstart', function (e) {
+    x0 = e.touches[0].clientX;
+  }, { passive: true });
+  track.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 40) go(dx < 0 ? at + 1 : at - 1);
+    x0 = null;
+  });
+
+  // Bitta rasm bo'lsa boshqaruv keraksiz.
+  if (items.length < 2) {
+    document.querySelector('.car-nav').style.display = 'none';
+  }
+
+  render();
+})();
+</script>
+
+</body>
+</html>
